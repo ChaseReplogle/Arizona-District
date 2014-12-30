@@ -51,6 +51,7 @@ function arizona_district_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'arizona-district' ),
+		'support' => __( 'Support Menu', 'arizona-district' ),
 	) );
 
 	/*
@@ -101,6 +102,8 @@ add_action( 'widgets_init', 'arizona_district_widgets_init' );
  */
 function arizona_district_scripts() {
 	wp_enqueue_style( 'arizona-district-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'arizona-district-main-style', get_template_directory_uri() . '/css/main-style.css');
 
 	wp_enqueue_script( 'arizona-district-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

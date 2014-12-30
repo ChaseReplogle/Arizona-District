@@ -115,7 +115,7 @@ q {
 }
 
 a:focus {
-	outline: thin dotted;
+
 }
 
 a:hover,
@@ -136,19 +136,9 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	clear: both;
 }
 
 p {
@@ -399,83 +389,47 @@ a {
 }
 
 a:visited {
-	color: purple;
+
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+
 }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
+.navigation {
 	display: block;
 	float: left;
 	width: 100%;
 }
 
-.main-navigation ul {
+.navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
 
-.main-navigation li {
+.navigation li {
 	float: left;
 	position: relative;
 }
 
-.main-navigation a {
+.navigation a {
 	display: block;
 	text-decoration: none;
 }
 
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
+.sub-menu {
+	display: none;
 }
 
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a {
-}
-
-.main-navigation ul ul :hover > a {
-}
-
-.main-navigation ul ul a:hover {
-}
-
-.main-navigation ul li:hover > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
+.navigation .current_page_item > a,
+.navigation .current-menu-item > a,
+.navigation .current_page_ancestor > a {
 }
 
 /* Small menu */

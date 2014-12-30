@@ -260,3 +260,114 @@ function arizona_district_category_transient_flusher() {
 }
 add_action( 'edit_category', 'arizona_district_category_transient_flusher' );
 add_action( 'save_post',     'arizona_district_category_transient_flusher' );
+
+
+
+
+
+
+/**
+ * A custom Menue template to handle the full screen drop down menus.
+ * This portion of the code builds the primary navigation.
+ *
+ */
+if ( ! function_exists( 'arizona_district_custom_menu' ) ) :
+
+function arizona_district_custom_menu() {
+
+$items = wp_get_nav_menu_items( 2, $args );
+echo '<ul class="menu-main-site-menu menu">';
+
+	foreach($items as $item)
+	{
+		$page = get_page_by_title( $item->title );
+		$page_ID = $page->ID;
+		?>
+	    <li class="menu-item menu-item-type-post_type menu-item-object-page" id="<?php echo $item->title; ?>">
+	    	<a href="#"><?php echo $item->title; ?></a>
+	    </li>
+	<?php }
+
+	echo '</ul>';
+
+}
+
+endif;
+
+
+/**
+ * This portion of the code handel's building the drop down panels
+ *
+ */
+if ( ! function_exists( 'arizona_district_custom_menu_panels' ) ) :
+
+function arizona_district_custom_menu_panels() {
+
+$panels = wp_get_nav_menu_items( 2, $args );
+
+foreach($panels as $panel)
+	{
+		$page = get_page_by_title( $panel->title );
+		$page_ID = $page->ID;
+		?>
+
+	    <div class="menu-item__dropdown navigation" id="dropdown<?php echo $panel->title; ?>">
+	    	<div class="wrapper">
+				<div class="call-to-action__text col-5-12">
+					<h3>Test Call to Action</h3>
+					<p class="support-text">Credentialling and supporting ministers is at the heart of our mission. It’s a process we take seriously because we deeply believe in the power of commitment and accountability.</p>
+					<a href="#" class="button button-green">Call to Action</a>
+				</div>
+
+				<div class="menu-item__dropdown__menu col-7-12">
+
+					<ul>
+					  <?php wp_list_pages("title_li=&child_of=$page_ID"); ?>
+					</ul>
+				</div>
+			</div>
+	    </div>
+	<?php }
+
+}
+endif;
+
+
+
+/**
+ * Creates the nested menu tree to be used on mobile devices.
+ *
+ */
+if ( ! function_exists( 'arizona_district_mobile_menu' ) ) :
+
+function arizona_district_mobile_menu() {
+
+$items = wp_get_nav_menu_items( 2, $args );
+echo '<ul class="menu-mobile-site-menu menu">';
+
+	foreach($items as $item)
+	{
+		$page = get_page_by_title( $item->title );
+		$page_ID = $page->ID;
+		?>
+
+	    <?php $children = get_pages('child_of='.$page_ID); if (count($children) !=0 ) { ?>
+	    	<li class="menu-item menu-item-type-post_type menu-item-object-page menu_item_has_children" id="<?php echo $item->title; ?>">
+		<?php } else { ?>
+			<li class="menu-item menu-item-type-post_type menu-item-object-page" id="<?php echo $item->title; ?>">
+		<?php } ?>
+	    	<a href="#"><?php echo $item->title; ?></a>
+
+		<?php $children = get_pages('child_of='.$page_ID); if (count($children) !=0 ) { ?>
+	    	<ul class="children">
+				<?php wp_list_pages("title_li=&child_of=$page_ID"); ?>
+	    	</ul>
+	    	<?php } ?>
+	    </li>
+	<?php }
+
+	echo '</ul>';
+
+}
+
+endif;

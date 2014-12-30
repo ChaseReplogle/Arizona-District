@@ -42,3 +42,58 @@
 		}
 	};
 } )();
+
+
+
+
+
+
+/**
+ * navigation.js
+ *
+ * Handels the primary navigation dropdown panels.
+ */
+
+$( ".menu-main-site-menu .menu-item" ).click(function() {
+  var panelID = $(this).attr('id');
+  $(".menu-item__dropdown").slideUp("fast");
+  $(".menu-main-site-menu .menu-item").removeClass("selected");
+  $(this).addClass("selected");
+  $('#dropdown' + panelID ).slideToggle( "fast", function() {
+
+  });
+});
+
+
+
+
+/**
+ * navigation.js
+ *
+ * Handles toggling nexted menu items.
+ */
+
+ $( ".page_item_has_children" ).click(function() {
+ 	 event.preventDefault();
+ 	 $(this).children(".children").toggle();
+ 	 $(this).toggleClass("selected");
+ });
+
+
+
+
+
+/**
+ * navigation.js
+ *
+ * Handles the mobile navigation
+ */
+
+$(".header__mobile__toggle").click(function() {
+	$(".menu-mobile-site-menu").toggle();
+});
+
+$(".menu-mobile-site-menu .menu_item_has_children").click(function() {
+ 	 $(this).children(".children").slideDown();
+ 	 $(this).toggleClass("selected");
+ });
