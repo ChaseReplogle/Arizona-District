@@ -21,10 +21,14 @@ Support Menu Styles
 			}
 
 				.header-support__menu .menu-item a {
-					color: $white;
+					color: $gray;
 					font-size: 12px;
-					padding: 8px 10px;
+					padding: 8px 8px;
 					font-weight: 200;
+
+					&:hover {
+						color: $white;
+					}
 				}
 
 
@@ -206,7 +210,8 @@ Mobile Menu Styles
 		}
 
 			.menu-mobile-site-menu .page_item_has_children .children a {
-				padding: 10px 0px 0px 60px;
+				padding: 10px 0px 10px 60px;
+				color: #909090;
 			}
 
 
@@ -294,5 +299,44 @@ Menu Slide Down Panels
 	}
 
 		.menu_panels .button {
-			width: 80%;
+			width: 70%;
+			margin-top: 20px;
+
+		}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+Footer Menu
+--------------------------------------------------------------*/
+
+.footer-menu {
+	padding: 80px 20px 100px 20px;
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+}
+
+	.footer-menu a {
+		text-decoration: none;
+		font-size: 13px;
+		color: $white;
+		font-weight: 200;
+		line-height: 20px;
+		padding: 5px 0px;
+		display: block;
+
+	}
+
+		.footer-menu .menu-item a {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+
+		.footer-menu .page_item .children {
+			display: none;
 		}

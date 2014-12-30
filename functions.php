@@ -52,6 +52,7 @@ function arizona_district_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'arizona-district' ),
 		'support' => __( 'Support Menu', 'arizona-district' ),
+		'footer' => __( 'Footer Menu', 'arizona-district' ),
 	) );
 
 	/*
@@ -135,3 +136,16 @@ require get_template_directory() . '/inc/extras.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+
+/**
+ * Redirects any page set as a Place Holder to the homepage.
+ */
+function my_page_template_redirect()
+{
+    if( is_page_template( 'page-placeholder.php' ) )
+    {
+        wp_redirect( home_url( '' ) );
+        exit();
+    }
+}
+add_action( 'template_redirect', 'my_page_template_redirect' );

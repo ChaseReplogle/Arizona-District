@@ -54,7 +54,7 @@
  * Handels the primary navigation dropdown panels.
  */
 
-$( ".menu-main-site-menu .menu-item" ).click(function() {
+$( ".menu-main-site-menu > .menu-item" ).click(function() {
   var panelID = $(this).attr('id');
   $(".menu-item__dropdown").slideUp("fast");
   $(".menu-main-site-menu .menu-item").removeClass("selected");
@@ -70,13 +70,14 @@ $( ".menu-main-site-menu .menu-item" ).click(function() {
 /**
  * navigation.js
  *
- * Handles toggling nexted menu items.
+ * Handles toggling nested menu items.
  */
 
- $( ".page_item_has_children" ).click(function() {
- 	 event.preventDefault();
- 	 $(this).children(".children").toggle();
- 	 $(this).toggleClass("selected");
+ $( ".page_item_has_children > a" ).click(function() {
+   event.preventDefault();
+   $(this).next("ul").slideDown("fast", function() {
+    $(this).parent().addClass("selected");
+  });
  });
 
 
@@ -90,10 +91,12 @@ $( ".menu-main-site-menu .menu-item" ).click(function() {
  */
 
 $(".header__mobile__toggle").click(function() {
-	$(".menu-mobile-site-menu").toggle();
+	$(".menu-mobile-site-menu").slideToggle("slow");
 });
 
-$(".menu-mobile-site-menu .menu_item_has_children").click(function() {
- 	 $(this).children(".children").slideDown();
- 	 $(this).toggleClass("selected");
+$(".menu-mobile-site-menu .menu_item_has_children > a").click(function() {
+   $(".menu-mobile-site-menu .menu_item_has_children").children(".children").slideUp();
+    $(".menu-mobile-site-menu .menu_item_has_children").removeClass("selected");
+   $(this).next(".children").slideDown();
+   $(this).parent().toggleClass("selected");
  });

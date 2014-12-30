@@ -314,9 +314,9 @@ foreach($panels as $panel)
 	    <div class="menu-item__dropdown navigation" id="dropdown<?php echo $panel->title; ?>">
 	    	<div class="wrapper">
 				<div class="call-to-action__text col-5-12">
-					<h3>Test Call to Action</h3>
-					<p class="support-text">Credentialling and supporting ministers is at the heart of our mission. It’s a process we take seriously because we deeply believe in the power of commitment and accountability.</p>
-					<a href="#" class="button button-green">Call to Action</a>
+					<h3><?php the_field('call_to_action_headline', $page_ID); ?></h3>
+					<p class="support-text"><?php the_field('call_to_action_text', $page_ID); ?></p>
+					<a href="<?php the_field('call_to_action_link', $page_ID); ?>" class="button button-green"><?php the_field('call_to_action_link_name', $page_ID); ?></a>
 				</div>
 
 				<div class="menu-item__dropdown__menu col-7-12">
@@ -364,6 +364,43 @@ echo '<ul class="menu-mobile-site-menu menu">';
 	    	</ul>
 	    	<?php } ?>
 	    </li>
+	<?php }
+
+	echo '</ul>';
+
+}
+
+endif;
+
+
+
+
+
+
+/**
+ * A custom Menue template that creates the footer navigation.
+ *
+ */
+if ( ! function_exists( 'arizona_district_footer_menu' ) ) :
+
+function arizona_district_footer_menu() {
+
+$items = wp_get_nav_menu_items( 4, $args );
+echo '<ul class="footer-menu menu wrapper">';
+
+	foreach($items as $item)
+	{
+		$page = get_page_by_title( $item->title );
+		$page_ID = $page->ID;
+		?>
+		<div class="footer-section col-1-6">
+	    <li class="menu-item menu-item-type-post_type menu-item-object-page" id="<?php echo $item->title; ?>">
+	    	<a href="#"><?php echo $item->title; ?></a>
+	    </li>
+	    <ul>
+		  <?php wp_list_pages("title_li=&child_of=$page_ID"); ?>
+		</ul>
+		</div>
 	<?php }
 
 	echo '</ul>';
