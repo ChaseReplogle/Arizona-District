@@ -108,6 +108,14 @@ function arizona_district_scripts() {
 
 	wp_enqueue_script( 'arizona-district-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
+	wp_enqueue_script( 'arizona-district-instagram', get_template_directory_uri() . '/js/instagram.js', array(), '', true );
+
+	wp_enqueue_script( 'arizona-district-utilities', get_template_directory_uri() . '/js/utilities.js', array(), '', true );
+
+	wp_enqueue_script( 'arizona-district-count-up-waypoints', 'http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array(), '', true );
+
+	wp_enqueue_script( 'arizona-district-count-up', get_template_directory_uri() . '/js/count-up.js', array(), '', true );
+
 	wp_enqueue_script( 'arizona-district-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -149,3 +157,35 @@ function my_page_template_redirect()
     }
 }
 add_action( 'template_redirect', 'my_page_template_redirect' );
+
+
+/**
+ * Handles routes for searching different post types.
+ */
+function SearchFilter($query) {
+if ($query->is_search or $query->is_feed) {
+// Churches
+if($_GET['post_type'] == "churches") {
+$query->set('post_type', array('churches'));
+}
+// Events
+elseif($_GET['post_type'] == "events") {
+$query->set('post_type', array('tribe_events'));
+}
+// Resources
+elseif($_GET['post_type'] == "resources") {
+$query->set('post_type', array('resources'));
+}
+// Staff
+elseif($_GET['post_type'] == "staff") {
+$query->set('post_type', array('staff'));
+}
+// All
+elseif($_GET['post_type'] == "all") {
+$query->set('post_type', array('staff', 'churches', 'tribe_events', 'page', 'post'));
+}
+}
+return $query;
+}
+// This filter will jump into the loop and arrange our results before they're returned
+add_filter('pre_get_posts','SearchFilter');

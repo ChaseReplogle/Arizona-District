@@ -8,6 +8,8 @@ Footer
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/monument_valley.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/monument_valley.jpg', sizingMethod='scale')";
 	border-top: 1px solid black;
 
 }
@@ -33,7 +35,7 @@ Footer
 
 	.site-footer-info {
 		overflow: visible;
-		background: rgba(46, 46, 46, 0.88);
+		background: rgba(46, 46, 46, 0.98);
 		padding: 40px 20px 50px 20px;
 		border-top: 1px solid black;
 
@@ -67,3 +69,590 @@ Footer
 			padding: 15px 0px 0px 0px;
 
 		}
+
+
+
+/*--------------------------------------------------------------
+Search Form
+--------------------------------------------------------------*/
+
+.search-options {
+	display: none;
+	position: absolute;
+
+}
+
+	.search-options input[type=radio] {
+	    display:none;
+	    margin:0px;
+	    height: 0px;
+	    line-height: 0px;
+	}
+
+	.search-options input[type=radio] label {
+		cursor: pointer;
+	}
+
+.search-form {
+
+}
+
+	#s {
+		width: 80%;
+		font-weight: 200;
+	}
+
+	#searchbutton {
+		width: 20%;
+	}
+
+
+
+/*--------------------------------------------------------------
+Main Header
+--------------------------------------------------------------*/
+
+.main-header {
+	background: url('../images/header.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: block;
+	padding: 0px;
+	height: auto;
+}
+
+	.main-header .wrapper {
+	}
+
+	.main-header-stats {
+		text-align: center;
+		padding: 120px 20px 60px 20px;
+
+		@media screen and (max-width: 650px) {
+			padding: 80px 20px 40px 20px;
+		}
+
+		@media screen and (max-width: 450px) {
+			padding: 50px 20px 00px 20px;
+		}
+	}
+
+		.main-header-stats ul li {
+			display: none;
+		}
+
+		.main-header-stats ul li.show {
+			display: block;
+		}
+
+		.main-header-stats p.support-text {
+			margin-bottom: 0px;
+			font-size: 24px;
+			color: $white;
+			font-weight: 200;
+
+			@media screen and (max-width: 650px) {
+				font-size: 18px;
+			}
+		}
+
+		.main-header-stats h2 {
+			font-size: 100px;
+			line-height: 120px;
+			font-weight: 400;
+			color: #FEFFD6;
+
+			@media screen and (max-width: 650px) {
+				font-size: 70px;
+				line-height: 80px;
+			}
+
+			@media screen and (max-width: 450px) {
+				font-size: 40px;
+				line-height: 50px;
+			}
+		}
+
+		.main-header-stats a {
+			color: #FFD0A3;
+			font-weight: 200;
+			font-size: 14px;
+			margin-top: 30px;
+			display: block;
+		}
+
+
+	.main-header-search {
+		padding: 0px 10% 200px 10%;
+		overflow: visible;
+
+		@media screen and (max-width: 650px) {
+			padding: 0px 10% 100px 10%;
+		}
+
+		@media screen and (max-width: 650px) {
+			padding: 0px 10% 50px 10%;
+		}
+	}
+
+		#searchOptions {
+			position: relative;
+			overflow: visible;
+
+			@media screen and (max-width: 900px) {
+				width: 100%;
+				text-align: center;
+				padding: 0px 0px 10px 0px;
+			}
+
+			@media screen and (max-width: 450px) {
+				width: 100%;
+				text-align: center;
+				padding: 0px 0px 0px 0px;
+			}
+		}
+
+		#searchMain {
+			@media screen and (max-width: 900px) {
+				width: 100%;
+				padding: 0px;
+			}
+		}
+
+		#search-options-link {
+			color: $gray;
+			font-size: 14px;
+			text-decoration: none;
+			text-align: center;
+			font-weight: 200;
+			display: block;
+			padding: 23px 10px 15px 10px;
+
+			&:after {
+				content: "▼";
+				padding: 0px 0px 0px 10px;
+				font-size: 10px;
+				color: #dadada;
+			}
+
+			@media screen and (max-width: 900px) {
+				width: 100%;
+				text-align: center;
+			}
+
+			@media screen and (max-width: 450px) {
+				padding: 25px 10px 15px 10px;
+			}
+		}
+
+		#search-options-link.selected {
+			color: $white;
+
+			&:after {
+				content: "▼";
+				padding: 0px 0px 0px 10px;
+				font-size: 10px;
+				color: #dadada;
+			}
+		}
+
+		.main-header-search .search-options {
+			background: $gray-light;
+			top: 20px;
+			left: 25%;
+			padding: 0px 0px;
+			border: 1px solid $gray;
+			border-bottom: 0px;
+			-webkit-box-shadow: 0 0 85px 0 rgba(0,0,0,.6);
+			box-shadow: 0 0 85px 0 rgba(0,0,0,.6);
+			width: 50%;
+			z-index: 99;
+			margin: 0 auto;
+
+			@media screen and (max-width: 900px) {
+				width: 100%;
+			}
+		}
+
+			.search-options .wrapper {
+				overflow: visible;
+			}
+
+			.main-header-search .search-options label {
+				padding: 15px 30px;
+				border-bottom: 1px solid $gray;
+				display: block;
+				font-size: 16px;
+				line-height: 16px;
+				cursor: pointer;
+
+				&:hover {
+					background: $white;
+				}
+			}
+
+		.main-header-search .search-form {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		#s {
+			width: 72%;
+			font-size: 16px;
+			font-weight: 200;
+			padding: 21px 2% 21px 5%;
+			-webkit-border-radius: 50px 0 0 50px;
+			border-radius: 50px 0 0 50px;
+			margin: 0px;
+			border: 0px;
+
+			&:focus{
+			    outline: 0;
+			}
+
+			@media screen and (max-width: 450px) {
+				width: 80%;
+				-webkit-border-radius: 0px;
+				border-radius: 0px;
+				padding: 20px 10% 20px 10%;
+				text-align: center;
+
+			}
+		}
+
+		#searchsubmit {
+			background: $gray;
+			-webkit-border-radius: 0 50px 50px 0;
+			border-radius: 0 50px 50px 0;
+			font-size: 16px;
+			border: 0px;
+			outline: 0;
+			padding: 21px 5%;
+			width: 20%;
+			margin: 0px;
+			color: $gray-dark;
+			font-weight: 200;
+			cursor: pointer;
+			margin-left: -1px;
+
+			&:hover {
+				background: darken($green, 5%);
+				color: $white;
+			}
+
+			@media screen and (max-width: 450px) {
+				width: 100%;
+				-webkit-border-radius: 0px;
+				border-radius: 0px;
+				padding: 15px 0%;
+				margin-top: 0px;
+
+			}
+		}
+
+
+	.main-header-additional {
+		margin-top: 30px;
+	}
+		.main-header-additional a {
+			text-align: center;
+			display: block;
+			width: 100%;
+			font-size: 14px;
+			color: $white;
+			font-weight: 200;
+		}
+
+
+
+
+/*--------------------------------------------------------------
+Home Tabs
+--------------------------------------------------------------*/
+
+
+.tab-content {
+	display: none;
+	background: black;
+	backgroud-color: black;
+}
+
+#tab-1 {
+	display: block;
+}
+
+.tabs-menu {
+	background: $gray-dark;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.tabs-menu li {
+	width: 25%;
+	float: left;
+	display: block;
+
+	&:last-child a {
+		border-right: 1px solid black;
+	}
+
+	@media screen and (max-width: 460px) {
+		width: 50%;
+	}
+}
+
+	.tabs-menu a {
+		display: block;
+		text-align: center;
+		background: $gray-dark;
+		border-right: 1px solid black;
+		color: $white;
+		text-decoration: none;
+		font-weight: 200;
+		padding: 20px 0px;
+
+		&:hover {
+			background: lighten($gray-dark, 5%);
+		}
+
+		@media screen and (max-width: 600px) {
+			font-size: 14px;
+		}
+	}
+
+	.tabs-menu .current a {
+		background: $orange;
+	}
+
+	.tab-content {
+		position: relative;
+		overflow: hidden;
+		background: black;
+		backgroud-color: black;
+	}
+
+	.tab-content .gradient {
+		background: -moz-linear-gradient(left,  rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.78)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: linear-gradient(to right,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
+			@media screen and (max-width: 600px) {
+				background: rgba(0,0,0,0.7);
+			}
+	}
+
+	.tab-content-text {
+		width: 50%;
+		padding: 0px 0px 220px 40px;
+
+		@media screen and (max-width: 600px) {
+				width: 100%;
+				padding: 0px 40px 60px 40px
+			}
+	}
+
+		.tab-content-text h2 {
+			color: $white;
+			font-weight: 200;
+			font-size: 30px;
+			padding-top: 100px;
+			margin-bottom: 15px;
+
+			@media screen and (max-width: 600px) {
+				padding-top: 50px;
+			}
+		}
+
+		.tab-content-text p {
+			color: $white;
+			font-weight: 200;
+			font-size: 17px;
+			margin-bottom: 25px;
+		}
+
+		.tab-content-text a {
+			color: $green;
+			font-weight: 200;
+			font-size: 17px;
+			margin-bottom: 12px;
+			display: block;
+		}
+
+
+	.image-background {
+
+	}
+
+
+/*--------------------------------------------------------------
+Instagram Bar
+--------------------------------------------------------------*/
+
+
+.instagram-bar {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: -10px;
+	border-top: 1px solid black;
+}
+
+	.instagram-bar-box {
+		position: absolute;
+		width: 16.7%;
+		height: 97.6%;
+		right: 0%;
+		padding: 0% 2% 0% 2%;
+		background: $gray-dark;
+	}
+
+	.instagram-bar-box-wrapper {
+		position: absolute;
+		bottom: 20px;
+		width: 80%;
+	}
+
+	.instagram-bar-box p {
+		font-size: 17px;
+		color: $white;
+		font-weight: 500;
+		margin-bottom: 10px;
+
+		@media screen and (max-width: 900px) {
+			font-size: 13px;
+		}
+	}
+
+	.instagram-bar-box a {
+		color: $green;
+		font-size: 15px;
+	}
+
+
+
+
+/*--------------------------------------------------------------
+Resource Bar
+--------------------------------------------------------------*/
+
+.resource-bar {
+	background-image: -o-linear-gradient(179deg, #f89838 0%, #F76B1C 100%);
+	background-image: -moz-linear-gradient(179deg, #f89838 0%, #F76B1C 100%);
+	background-image: -ms-linear-gradient(179deg, #f89838 0%, #F76B1C 100%);
+	background-image: linear-gradient(269deg, #f89838 0%, #F76B1C 100%);
+	border-top: 1px solid black;
+	padding: 30px 20px;
+}
+
+	.resource-bar-item {
+		width: 18.5%;
+		float: left;
+		display: block;
+
+		@media screen and (max-width: 768px) {
+			width: 25%;
+		}
+
+		@media screen and (max-width: 600px) {
+			width: 45%;
+
+			&:nth-child(odd) {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	.resource-bar-item a {
+		display: block;
+		text-decoration: none;
+		padding: 260px 20px 0px 20px;
+		margin: 10px 10% 10px 0px;
+		position: relative;
+		overflow: hidden;
+		-webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.6);
+		box-shadow: 0 0 15px 0 rgba(0,0,0,.6);
+
+		&:after {
+			background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.9) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.9))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.9) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.9) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.9) 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.9) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+			display: block;
+			height: 100%;
+			width: 100%;
+			content: ".";
+			color: transparent;
+			position: absolute;
+			z-index: 1;
+			bottom: 0px;
+			left: 0px;
+		}
+
+		@media screen and (max-width: 900px) {
+			padding: 220px 20px 0px 20px;
+		}
+
+		@media screen and (max-width: 500px) {
+			margin: 10px 0px 10px 0px;
+			padding: 200px 20px 0px 20px;
+		}
+	}
+
+		.resource-bar-item p {
+			color: $white;
+			text-align: right;
+			font-size: 16px;
+			line-height: 20px;
+			position: relative;
+			z-index: 2;
+			position: absolute;
+			bottom: 0px;
+			padding: 0px 20px;
+		}
+
+		.resource-bar-item img {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			max-width: none;
+			width: auto;
+			z-index: 0;
+		}
+
+	.resource-bar-text {
+		width: 25%;
+		float: right;
+		padding-left: 5%;
+		padding-top: 4%;
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+		.resource-bar-text h3 {
+			color: $white;
+		}
+
+		.resource-bar-text p {
+			color: $white;
+			font-size: 16px;
+			font-weight: 200;
+			margin-bottom: 15px;
+		}
+
+		.resource-bar-text a {
+			color: $white;
+			font-size: 16px;
+			font-weight: 200;
+		}
+

@@ -378,7 +378,7 @@ endif;
 
 
 /**
- * A custom Menue template that creates the footer navigation.
+ * A custom Menu template that creates the footer navigation.
  *
  */
 if ( ! function_exists( 'arizona_district_footer_menu' ) ) :
@@ -406,5 +406,129 @@ echo '<ul class="footer-menu menu wrapper">';
 	echo '</ul>';
 
 }
+
+endif;
+
+
+
+
+
+
+/**
+ * Adds a instagram bar to any page.
+ *
+ */
+if ( ! function_exists( 'arizona_district_instagram_bar' ) ) :
+
+function arizona_district_instagram_bar() { ?>
+
+
+<div class="instagram-bar hide-on-mobile">
+	<div class="instagram-bar-box">
+		<div class="instagram-bar-box-wrapper">
+			<p>Catch a glimpse from around Arizona.</p>
+			<p><a href="<?php the_field('instagram_url', 'option'); ?>">Instagram</a></p>
+		</div>
+	</div><!-- .instagram-bar-bos -->
+
+<!-- SnapWidget -->
+<script src="http://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="http://snapwidget.com/in/?u=bW5hb2d8aW58MTI1fDZ8MXx8bm98MHxub25lfG9uU3RhcnR8bm98eWVz&ve=301214" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+
+</div><!-- .instagram-bar -->
+
+<?php }
+
+endif;
+
+
+
+
+
+
+/**
+ * Adds a bar of resource links to any page.
+ *
+ */
+if ( ! function_exists( 'arizona_district_resources_bar' ) ) :
+
+function arizona_district_resources_bar() { ?>
+
+<div class="resource-bar">
+	<div class="wrapper">
+
+
+	<?php $i=0;
+
+	$post_objects = get_field('selected_resources');
+
+		if( $post_objects ): ?>
+
+		    <?php foreach( $post_objects as $post):  ?>
+		    	<?php if($i==4) break; ?>
+		        <?php setup_postdata($post); ?>
+
+		        	<div class="resource-bar-item">
+						<a href="<?php the_field('resource_link', $post->ID); ?>">
+							<p><?php the_field('resource_title', $post->ID); ?></p>
+							<?php
+							$image = get_field('resource_image', $post->ID);
+							$size = 'large';
+							if( $image ) {
+								echo wp_get_attachment_image( $image, $size );
+							} ?>
+						</a>
+					</div>
+
+				<?php $i++;  ?>
+		    <?php endforeach; ?>
+
+		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+		<?php endif; ?>
+
+		<div class="resource-bar-text hide-on-mobile">
+			<h3>Resources</h3>
+			<p>Ministries and resources to help support your calling and your church.</p>
+			<a href="#">Discover More</a>
+		</div>
+	</div>
+</div> <!-- .resource-bar -->
+
+<?php }
+
+endif;
+
+
+
+
+
+/**
+ * Creates the main homepage header
+ *
+ */
+if ( ! function_exists( 'arizona_district_home_header' ) ) :
+
+function arizona_district_home_header() { ?>
+
+
+<div class="main-header">
+		<div class="main-header-stats wrapper">
+			<p class="support-text">a network of</p>
+			<ul>
+				<li><h2><span class="timer"><?php the_field('number_of_churches', 'option'); ?></span> Churches</h2></li>
+				<li><h2><span class="timer"><?php the_field('number_of_members', 'option'); ?></span> Members</h2></li>
+				<li><h2><span class="timer"><?php the_field('number_of_ministers', 'option'); ?></span> Ministers</h2></li>
+			</ul>
+			<p class="support-text">building Christ’s kingdom in Arizona.</p>
+			<a href="#">Discover Open Ministry Positions</a>
+		</div>
+
+
+		<div class="main-header-search wrapper">
+			<?php get_search_form(); ?>
+		</div>
+	</div> <!-- .main-header -->
+
+<?php }
 
 endif;
