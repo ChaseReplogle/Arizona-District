@@ -69,3 +69,17 @@ $(document).ready(function() {
         $(tab).css("display", "block");
     });
 });
+
+
+
+
+
+/**
+ * Finds the current inner page ancestor and sets the main menu link to current
+ *
+ */
+var parentTitle = $(".page-inner-header h2").text();
+$(".menu-main-site-menu li a").filter(function() {
+// Matches exact string
+return $(this).text() === parentTitle;
+}).parent(".menu-item").addClass("selected");

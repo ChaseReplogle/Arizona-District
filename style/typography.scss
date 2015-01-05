@@ -3,11 +3,18 @@ body, input, button {
 	font-size: 19px;
 }
 
-h2 {
+h1 {
 	font-family:"open-sans",sans-serif;
-	line-height: 70px;
-	font-size: 55px;
-	font-weight: 800;
+	line-height: 60px;
+	font-size: 50px;
+	text-align: left;
+	font-weight: 600;
+	color: $gray-dark;
+	text-transform: uppercase;
+
+	margin-bottom: 50px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid $gray;
 }
 
 h2 {
@@ -32,3 +39,26 @@ p {
 p.support-text {
 	font-size: 15px;
 }
+
+
+.site-main p:first-of-type {
+	font-family: "adelle", "open-sans",sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+	margin-bottom: 35px;
+	color: $green;
+}
+
+span.dropcap {
+   float: left;
+   color: #333333;
+   font-size: 90px;
+   line-height: 60px;
+   padding-top: 8px;
+   padding-right: 12px;
+   padding-left: 3px;
+   font-family: "Open Sans";
+   font-weight: 600;
+   font-style: normal;
+}
+

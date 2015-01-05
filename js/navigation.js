@@ -73,7 +73,7 @@ $( ".menu-main-site-menu > .menu-item" ).click(function() {
  * Handles toggling nested menu items.
  */
 
- $( ".page_item_has_children > a" ).click(function() {
+ $( ".navigation .page_item_has_children > a" ).click(function() {
    event.preventDefault();
    $(this).next("ul").slideDown("fast", function() {
     $(this).parent().addClass("selected");
@@ -99,4 +99,11 @@ $(".menu-mobile-site-menu .menu_item_has_children > a").click(function() {
     $(".menu-mobile-site-menu .menu_item_has_children").removeClass("selected");
    $(this).next(".children").slideDown();
    $(this).parent().toggleClass("selected");
+ });
+
+ $( ".menu-mobile-site-menu .page_item_has_children > a" ).click(function() {
+   event.preventDefault();
+   $(this).next("ul").slideDown("fast", function() {
+    $(this).parent().addClass("selected");
+  });
  });

@@ -532,3 +532,35 @@ function arizona_district_home_header() { ?>
 <?php }
 
 endif;
+
+
+
+
+
+
+/**
+ * Creates sidebar navigation for inner pages
+ *
+ */
+if ( ! function_exists( 'arizona_district_sidebar_nav' ) ) :
+
+function arizona_district_sidebar_nav() {
+
+$postid = get_the_ID();
+$postparent = wp_get_post_parent_id( $postid );
+$children = wp_list_pages('title_li=&depth=1&echo=0&child_of=' . $postid);
+$siblings = wp_list_pages('title_li=&depth=1&echo=0&child_of=' . $postparent);
+
+?> <ul> <?php
+if ( has_children($postid) ) {
+	echo $children;
+} else {
+	echo $siblings;
+}
+?> </ul> <?php
+
+}
+
+endif;
+
+

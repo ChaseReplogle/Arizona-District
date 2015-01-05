@@ -54,6 +54,12 @@ Primary Menu Styles
 		display: block;
 	}
 
+	.header__branding h1 {
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+		border-bottom: 0px;
+	}
+
 		.header__branding__logo img {
 			width: 100%;
 			height: auto;
@@ -340,3 +346,134 @@ Footer Menu
 		.footer-menu .page_item .children {
 			display: none;
 		}
+
+
+
+
+
+/*--------------------------------------------------------------
+Page with Sidebar Navigation
+--------------------------------------------------------------*/
+
+.page-with-sidebar {
+	background: rgba(247,247,247,1);
+	background: -moz-linear-gradient(left, rgba(247,247,247,1) 0%, rgba(247,247,247,1) 49%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,247,247,1)), color-stop(49%, rgba(247,247,247,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(left, rgba(247,247,247,1) 0%, rgba(247,247,247,1) 49%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(left, rgba(247,247,247,1) 0%, rgba(247,247,247,1) 49%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(left, rgba(247,247,247,1) 0%, rgba(247,247,247,1) 49%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);}
+
+	.sidebar {
+		padding: 50px 30px 50px 0px;
+
+		@media screen and (max-width: 1140px) {
+			padding-left: 30px;
+		}
+	}
+
+	.sidebar ul {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.sidebar li {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	.sidebar li a {
+		display: block;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 400;
+		color: lighten($gray-dark, 20%);
+		padding: 17px 0px;
+		border-bottom: 1px solid lighten($gray, 5%);
+	}
+
+	.sidebar li.current_page_item a {
+		color: $green;
+		font-weight: 600;
+	}
+
+
+
+
+
+/*--------------------------------------------------------------
+Inner Page Header and Breadcrumb Navigation
+--------------------------------------------------------------*/
+
+.page-inner-header {
+	background: $white;
+	padding: 50px 0px;
+	border-bottom: 1px solid $gray;
+	position: relative;
+	overflow: hidden;
+}
+
+	.page-inner-header h2 {
+		  color: $white;
+		  font-weight: 200;
+		  font-size: 40px;
+		  margin-bottom: 7px;
+		  position: relative;
+		  z-index: 10;
+
+		@media screen and (max-width: 1140px) {
+			padding-left: 30px;
+		}
+	}
+
+	#crumbs {
+		z-index: 10;
+		position: relative;
+		padding: 0px;
+		line-height: 18px;
+
+		@media screen and (max-width: 1140px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+
+	#crumbs a, #crumbs span {
+		font-size: 13px;
+		color: $white;
+		padding: 0px 2px;
+		font-weight: 200;
+		text-decoration: none;
+		opacity: 1;
+	}
+
+	#crumbs span {
+		opacity: .6;
+	}
+
+	#crumbs a:first-child {
+		padding-left: 0px;
+	}
+
+	#crumbs a:hover {
+		text-decoration: underline;
+		opacity: 1;
+	}
+
+	.page-inner-header .gradient {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		background: rgba(40,140,132,1);
+background: rgba(40,140,132,1);
+background: -moz-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(40,140,132,1)), color-stop(57%, rgba(111,167,120,1)), color-stop(100%, rgba(191,212,159,1)));
+background: -webkit-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+background: -o-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+background: -ms-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+background: linear-gradient(to right, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 );		z-index: 5;
+		opacity: .85;
+	}

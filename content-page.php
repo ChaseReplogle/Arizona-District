@@ -8,7 +8,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php
+		$full_title = get_field('full_title');
+			if($full_title!=''){
+				echo "<h1>".$full_title."</h1>";
+			} else {
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			}
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
