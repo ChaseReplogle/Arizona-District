@@ -106,7 +106,7 @@ body { margin: 0px; }
   .hide-on-mobile { display: none !important; width: 0; height: 0; } }
 body, input, button { font-family: "open-sans",sans-serif; font-size: 19px; }
 
-h1 { font-family: "open-sans",sans-serif; line-height: 60px; font-size: 50px; text-align: left; font-weight: 600; color: #4a4a4a; text-transform: uppercase; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid #dfdfdf; }
+h1 { font-family: "open-sans",sans-serif; line-height: 60px; font-size: 50px; text-align: left; font-weight: 600; color: #4a4a4a; text-transform: uppercase; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #dfdfdf; }
 
 h2 { font-family: "open-sans",sans-serif; line-height: 35px; font-size: 25px; font-weight: 700; }
 
@@ -116,7 +116,7 @@ p { margin-bottom: 25px; }
 
 p.support-text { font-size: 15px; }
 
-.site-main p:first-of-type { font-family: "adelle", "open-sans",sans-serif; font-weight: 200; font-size: 25px; margin-bottom: 35px; color: #288c84; }
+span.intro { font-family: "adelle", "open-sans",sans-serif; font-weight: 200; font-size: 25px; margin-bottom: 35px; color: #288c84; }
 
 span.dropcap { float: left; color: #333333; font-size: 90px; line-height: 60px; padding-top: 8px; padding-right: 12px; padding-left: 3px; font-family: "Open Sans"; font-weight: 600; font-style: normal; }
 
@@ -248,7 +248,7 @@ Inner Page Header and Breadcrumb Navigation
 --------------------------------------------------------------*/
 .page-inner-header { background: white; padding: 50px 0px; border-bottom: 1px solid #dfdfdf; position: relative; overflow: hidden; }
 
-.page-inner-header h2 { color: white; font-weight: 200; font-size: 40px; margin-bottom: 7px; position: relative; z-index: 10; }
+.page-inner-header h2 { color: white; font-weight: 200; font-size: 40px; margin-bottom: 10px; position: relative; z-index: 10; }
 @media screen and (max-width: 1140px) { .page-inner-header h2 { padding-left: 30px; } }
 
 #crumbs { z-index: 10; position: relative; padding: 0px; line-height: 18px; }
@@ -383,7 +383,7 @@ Main Header
 @media screen and (max-width: 450px) { #s { width: 80%; -webkit-border-radius: 0px; border-radius: 0px; padding: 20px 10% 20px 10%; text-align: center; } }
 
 #searchsubmit { background: #dfdfdf; -webkit-border-radius: 0 50px 50px 0; border-radius: 0 50px 50px 0; font-size: 16px; border: 0px; outline: 0; padding: 21px 5%; width: 20%; margin: 0px; color: #4a4a4a; font-weight: 200; cursor: pointer; margin-left: -1px; }
-#searchsubmit:hover { background: #227871; color: white; }
+#searchsubmit:hover { background: #288c84; color: white; }
 @media screen and (max-width: 450px) { #searchsubmit { width: 100%; -webkit-border-radius: 0px; border-radius: 0px; padding: 15px 0%; margin-top: 0px; } }
 
 .main-header-additional { margin-top: 30px; }
@@ -465,3 +465,18 @@ Resource Bar
 .resource-bar-text p { color: white; font-size: 16px; font-weight: 200; margin-bottom: 15px; }
 
 .resource-bar-text a { color: white; font-size: 16px; font-weight: 200; }
+
+/*--------------------------------------------------------------
+Document Shortcode
+--------------------------------------------------------------*/
+.document { background: #fafafa; border: 1px solid #ececec; padding: 30px 4%; margin-bottom: 20px; margin-top: 30px; }
+
+.document .icon { float: left; width: 15%; margin-right: 4%; }
+
+.document_text { float: left; width: 81%; }
+
+.document p { margin: 0px; font-size: 16px; margin-bottom: 10px; }
+
+.document a { color: #d27026; font-size: 16px; display: block; }
+
+.document a.title { color: #4a4a4a; font-size: 20px; margin-bottom: 10px; text-decoration: none; }

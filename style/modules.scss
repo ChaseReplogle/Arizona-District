@@ -349,7 +349,7 @@ Main Header
 			margin-left: -1px;
 
 			&:hover {
-				background: darken($green, 5%);
+				background: $green;
 				color: $white;
 			}
 
@@ -670,6 +670,45 @@ Resource Bar
 
 
 
+/*--------------------------------------------------------------
+Document Shortcode
+--------------------------------------------------------------*/
 
+.document {
+	background: lighten($gray-light, 1%);
+	border: 1px solid lighten($gray, 5%);
+	padding: 30px 4%;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
 
+	.document .icon {
+		float: left;
+		width: 15%;
+		margin-right: 4%;
+	}
+
+	.document_text {
+		float: left;
+		width: 81%;
+	}
+
+	.document p {
+		margin: 0px;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	.document a {
+		color: $orange;
+		font-size: 16px;
+		display: block;
+	}
+
+	.document a.title {
+		color: $gray-dark;
+		font-size: 20px;
+		margin-bottom: 10px;
+		text-decoration: none;
+	}
 

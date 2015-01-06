@@ -469,7 +469,7 @@ function arizona_district_resources_bar() { ?>
 		        <?php setup_postdata($post); ?>
 
 		        	<div class="resource-bar-item">
-						<a href="<?php the_field('resource_link', $post->ID); ?>">
+						<a href="<?php the_field('internal_link', $post->ID); the_field('external_link', $post->ID); ?>">
 							<p><?php the_field('resource_title', $post->ID); ?></p>
 							<?php
 							$image = get_field('resource_image', $post->ID);
@@ -564,3 +564,37 @@ if ( has_children($postid) ) {
 endif;
 
 
+
+
+
+
+/**
+ * Creates Page Headers with Editable Images
+ *
+ */
+if ( ! function_exists( 'arizona_district_page_header' ) ) :
+
+function arizona_district_page_header() { ?>
+
+<div class="page-inner-header"
+	<?php  $header_image = get_field('header_image');
+	if($header_image!=''){
+		$size = 'large';
+		$image = wp_get_attachment_image_src( $header_image, $size ); ?>
+	style="background: url('<?php echo $image[0]; ?>') no-repeat center center;-webkit-background-size: cover;
+	-moz-background-size: cover; -o-background-size: cover; background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $image[0]; ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $image[0]; ?>', sizingMethod='scale')";"
+	<?php } ?>
+>
+	<div class="gradient"></div>
+	<div class="wrapper">
+		<h2><?php page_ancestor(); ?></h2>
+		<?php the_breadcrumb(); ?>
+	</div>
+</div><!-- .page-inner-header -->
+
+<?php
+
+}
+
+endif;

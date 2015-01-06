@@ -146,6 +146,14 @@ require get_template_directory() . '/inc/customizer.php';
 
 
 /**
+ * Shortcodes
+ */
+require get_template_directory() . '/shortcodes/shortcodes.php';
+
+
+
+
+/**
  * Redirects any page set as a Place Holder to the homepage.
  */
 function my_page_template_redirect()

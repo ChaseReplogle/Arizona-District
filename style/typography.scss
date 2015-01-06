@@ -12,7 +12,7 @@ h1 {
 	color: $gray-dark;
 	text-transform: uppercase;
 
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid $gray;
 }
@@ -41,7 +41,7 @@ p.support-text {
 }
 
 
-.site-main p:first-of-type {
+span.intro {
 	font-family: "adelle", "open-sans",sans-serif;
 	font-weight: 200;
 	font-size: 25px;
