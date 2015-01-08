@@ -1,0 +1,86 @@
+[
+    {
+        "text": "Document",
+        "value": "documents",
+        "content": false,
+        "description": true,
+        "description_text": "Paste in the URL to the document you would like to link to. If you haven't already, use the Document tab to the left to create your document.",
+        "options": [
+            {
+                "type": "textbox",
+                "name": "href",
+                "label": "URL"
+            }
+        ]
+    },
+    {
+        "text": "Intro Paragraph",
+        "value": "intro_paragraph",
+        "content": true,
+        "hideContentInput": false,
+        "description": true,
+        "description_text": "Creates a special style for the first paragraph of long posts or pages."
+    },
+    {
+        "text": "Drop Cap",
+        "value": "dropcap",
+        "content": true,
+        "hideContentInput": false,
+        "description": true,
+        "description_text": "Creates a specially styled dropcap to be used on the first letter of the first paragraph."
+    },
+    {
+        "text": "Button",
+        "value": "button",
+        "content": false,
+        "description": true,
+        "description_text": "Creates a styled button on the page, either default size or full width, and in various colors.",
+        "options": [
+            {
+                "type": "textbox",
+                "name": "url",
+                "label": "URL"
+            },
+            {
+                "type": "textbox",
+                "name": "text",
+                "label": "Button Text"
+            },
+            {
+                "type": "select",
+                "name": "width",
+                "label": "Width",
+                "options": [
+                    {
+                        "text": "Default",
+                        "value": "default"
+                    },
+                    {
+                        "text": "Full Width",
+                        "value": "full"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "name": "color",
+                "label": "Color",
+                "options": [
+                    {
+                        "text": "Gray",
+                        "value": "gray"
+                    },
+                    {
+                        "text": "Green",
+                        "value": "green"
+                    },
+                    {
+                        "text": "Orange",
+                        "value": "orange"
+                    }
+                ]
+            }
+        ]
+    }
+
+]

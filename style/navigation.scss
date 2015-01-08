@@ -306,7 +306,7 @@ Menu Slide Down Panels
 
 		.menu_panels .button {
 			width: 70%;
-			margin-top: 20px;
+			margin-top: 30px;
 
 		}
 
@@ -364,7 +364,7 @@ Page with Sidebar Navigation
 	background: -ms-linear-gradient(left, rgba(247,247,247,1) 0%, rgba(247,247,247,1) 49%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);}
 
 	.sidebar {
-		padding: 50px 30px 50px 0px;
+		padding: 50px 0px 50px 0px;
 
 		@media screen and (max-width: 1140px) {
 			padding-left: 30px;
@@ -421,6 +421,7 @@ Inner Page Header and Breadcrumb Navigation
 		  margin-bottom: 10px;
 		  position: relative;
 		  z-index: 10;
+		  text-transform: inherit;
 
 		@media screen and (max-width: 1140px) {
 			padding-left: 30px;

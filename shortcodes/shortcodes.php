@@ -1,6 +1,13 @@
 <?php
 
 
+/**
+ *
+ *
+ * Shortcode: Link to Document in Post
+ *
+ */
+
 function document($atts) {
 
    extract(shortcode_atts(array(
@@ -30,7 +37,7 @@ $the_query = new WP_Query( $args ); ?>
           </a>
         </div>
       <div class="document_text">
-          <a href='<?php the_field("document_file"); ?>' class="title"><?php the_title(); ?> (<?php the_field("document_type"); ?>)</a>
+          <a href='<?php the_field("document_file"); ?>' class="title"><?php the_title(); ?> <span>(<?php the_field("document_type"); ?>)</span></a>
           <p><?php echo $excerpt; ?>...</p>
           <a href="<?php the_field('document_file'); ?>">Download</a>
         </div>
@@ -45,3 +52,59 @@ $the_query = new WP_Query( $args ); ?>
 }
 
 add_shortcode('document', 'document');
+
+
+
+
+
+
+/**
+ *
+ *
+ * Shortcode: Creates styled first paragraph
+ *
+ */
+
+function intro_paragraph( $attr, $content = null ) {
+    return '<p><span class="intro">' . do_shortcode($content) . '</span></p>';
+}
+add_shortcode('intro_paragraph', 'intro_paragraph');
+
+
+
+
+
+/**
+ *
+ *
+ * Shortcode: Style for a Letter Drop Cap
+ *
+ */
+
+ function dropcap( $attr, $content = null ) {
+    return '<span class="dropcap">' . do_shortcode($content) . '</span>';
+}
+add_shortcode('dropcap', 'dropcap');
+
+
+
+
+
+/**
+ *
+ *
+ * Shortcode: Creates Button Links
+ *
+ */
+
+ function button( $atts ) {
+    extract( shortcode_atts( array(
+      'url' => '',
+      'text' => '',
+      'width' => 'default',
+      'color' => 'gray'
+      ), $atts ) );
+
+   return '<p><a href="' . $atts["url"] . '" class="button button-' . $atts["color"] . ' button-' . $atts["width"] . '"> ' . $atts["text"] . '</a></p>';
+}
+add_shortcode('button', 'button');

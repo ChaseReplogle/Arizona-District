@@ -1,21 +1,48 @@
 .button {
 	border-radius: 10px;
-	background-color: $gray-dark;
-	color: $white;
-	font-size: 14px;
-	padding: 18px 20px;
-	border: 1px solid #000;
+	background-color: $gray-light;
+	color: $gray-dark;
+	font-size: 15px;
+	padding: 18px 50px;
+	border: 1px solid darken($gray, 0%);
 	text-align: center;
 	width: auto;
 	font-weight: 300;
+	text-decoration: none;
+	margin-bottom: 30px;
+
+	&:hover {
+
+	background-color: lighten($gray-light, 1%);
+	}
+}
+
+.button-default {
+	display: inline-block;
+}
+
+.button-full {
+	display: block;
+	padding: 25px
 }
 
 .button-green {
 	background-color: $green;
 	border-color: #527572;
+	color: $white;
 
 	&:hover {
 		background-color: darken($green, 2%);
 		border-color: #527572;
+	}
+}
+
+.button-orange {
+	background-color: $orange;
+	border-color: darken($orange, 5%);
+	color: $white;
+
+	&:hover {
+		background-color: lighten($orange, 10%);
 	}
 }

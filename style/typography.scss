@@ -3,6 +3,10 @@ body, input, button {
 	font-size: 19px;
 }
 
+a {
+	color: $green;
+}
+
 h1 {
 	font-family:"open-sans",sans-serif;
 	line-height: 60px;
@@ -19,25 +23,41 @@ h1 {
 
 h2 {
 	font-family:"open-sans",sans-serif;
-	line-height: 35px;
-	font-size: 25px;
+	line-height: 45px;
+	font-size: 30px;
 	font-weight: 700;
+	margin-bottom: 15px;
+	margin-top: 30px;
+	text-transform: uppercase;
 }
 
 h3 {
 	font-family:"open-sans",sans-serif;
 	line-height: 35px;
 	font-size: 25px;
-	font-weight: 500;
+	font-weight: 700;
 	margin-bottom: 15px;
+	margin-top: 30px;
+}
+
+h4 {
+	font-family:"open-sans",sans-serif;
+	line-height: 35px;
+	font-size: 25px;
+	font-weight: 400;
+	margin-bottom: 15px;
+	margin-top: 30px;
 }
 
 p {
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 p.support-text {
 	font-size: 15px;
+	line-height: 24px;
+	margin-bottom: 25px;
+	color: lighten($gray-dark, 10%);
 }
 
 
@@ -62,3 +82,52 @@ span.dropcap {
    font-style: normal;
 }
 
+blockquote {
+	margin: 40px 0px 40px 50px;
+	display: block;
+}
+
+blockquote p {
+	font-family: "adelle", "open-sans",sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+	margin-bottom: 30px;
+	color: $green;
+}
+
+hr {
+	background: #ECECEC;
+}
+
+.entry-content ul {
+	margin: 0px 0px 25px 50px;
+	list-style: disc;
+}
+
+.entry-content ol {
+	margin: 0px 0px 25px 50px;
+}
+
+.entry-content ul li, .entry-content ol li {
+	padding-left: 8px;
+}
+
+.gallery {
+	margin: 30px 0px 30px 0px;
+}
+
+.gallery img {
+	padding-right: 5px;
+}
+
+.wp-caption {
+	margin-bottom: 15px;
+}
+
+.wp-caption-text {
+	font-size: 14px;
+	font-style: italic;
+	color: lighten($gray-dark, 35%);
+	text-align: left;
+	font-weight: 200;
+}
