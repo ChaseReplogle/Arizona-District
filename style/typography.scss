@@ -131,3 +131,30 @@ hr {
 	text-align: left;
 	font-weight: 200;
 }
+
+table {
+	border: 1px solid $gray;
+	border-right: 0px;
+	border-bottom: 0px;
+	margin-bottom: 25px;
+}
+
+table tr td {
+	border-right: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	padding: 15px 20px;
+	font-size: 15px;
+}
+
+table tr.table-header {
+	background: $gray-light;
+}
+
+
+.by-line {
+	display: block;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 30px;
+	margin-top: 10px;
+}

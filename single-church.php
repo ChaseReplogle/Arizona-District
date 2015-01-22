@@ -1,0 +1,63 @@
+<?php get_header(); ?>
+
+<?php get_template_part( 'templates/header', 'support_menu' ); ?>
+
+<?php get_template_part( 'templates/header', 'menu' ); ?>
+<div class="mobile-menu"><?php get_template_part( 'templates/header', 'mobile-menu' ); ?></div>
+
+	<span class="spacer">-</span>
+	<div id="primary" class="content-area page-with-sidebar">
+
+		<?php arizona_district_page_header(); ?>
+
+		<div class="wrapper">
+			<aside class="sidebar col-3-12 hide-on-mobile">
+				<?php arizona_district_church_sidebar(); ?>
+			</aside>
+
+			<main id="main" class="single-church-main site-main col-9-12" role="main">
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<h1><?php the_field('church_name');?><span class="by-line"><?php the_field('church_city');?>, AZ</span></h1>
+
+					<div class="">
+						<p><span class="church-label">Pastor:</span> <?php the_field('pastors_name');?></p>
+						<p><span class="church-label">Phone:</span> <?php the_field('phone');?></p>
+						<p><span class="church-label">Email:</span> <?php the_field('email');?></p>
+						<?php $location = get_field('location'); ?>
+						<p><span class="church-label">Location:</span><br />
+							<?php echo $location[address];?>
+							<a href="http://maps.google.com/maps?z=12&t=m&q=loc:<?php echo $location[lat] ?>+<?php echo $location[lng] ?>" target="_blank" class="direction_link">Get Directions</a>
+						</p>
+						<?php if( get_field('mailing_address') ) { ?>
+							<p><span class="church-label">Mailing Address:</span><br />
+							<?php the_field('mailing_address');?></p>
+						<?php } ?>
+					</div>
+
+					<?php if( !empty($location) ): ?>
+						<div class="acf-map">
+							<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+						</div>
+					<?php endif; ?>
+				<?php endwhile; // end of the loop. ?>
+
+			</main><!-- #main -->
+		</div>
+
+	</div><!-- #primary -->
+
+
+<?php if( get_field('instagram_bar') ) { ?>
+	<?php arizona_district_instagram_bar(); ?>
+<?php } ?>
+
+
+<?php if( get_field('resources_bar') ) { ?>
+	<?php arizona_district_resources_bar(); ?>
+<?php } ?>
+
+
+
+
+<?php get_footer(); ?>

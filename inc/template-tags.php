@@ -588,12 +588,192 @@ function arizona_district_page_header() { ?>
 >
 	<div class="gradient"></div>
 	<div class="wrapper">
-		<h2><?php page_ancestor(); ?></h2>
+		<h2><?php if ( is_category() ) {
+                echo single_cat_title( '', false );
+              } elseif ( is_tax('city_glossary') ) {
+                echo 'Cities By Alphabet';
+              } elseif ( is_tax('name_glossary') ) {
+                echo 'Churches By Alphabet';
+              } elseif ( is_singular('church') ) {
+                echo 'Churches';
+              } else {
+		page_ancestor(); } ?></h2>
 		<?php the_breadcrumb(); ?>
 	</div>
 </div><!-- .page-inner-header -->
 
 <?php
+
+}
+
+endif;
+
+
+
+
+
+/**
+ * Adds NEW to the end of a title where placed.
+ *
+ */
+if ( ! function_exists( 'arizona_district_new' ) ) :
+
+function arizona_district_new() {
+
+$mylimit=30 * 86400; //days * seconds per day
+$post_age = date('U') - get_post_time('U');
+if ($post_age < $mylimit) {
+echo '<span class="new">new</span>';
+}
+
+}
+
+endif;
+
+
+
+
+
+/**
+ * Creates Page Headers with Editable Images
+ *
+ */
+if ( ! function_exists( 'arizona_district_position_content' ) ) :
+
+function arizona_district_position_content() { ?>
+
+
+<div class="position_item">
+	<p class="support-text"><?php the_time('F j, Y'); ?></p>
+    <h2><?php the_field("position_title"); ?>
+    	<?php arizona_district_new(); ?>
+    <span class="type"><?php the_field("position_type"); ?></span></h2>
+    <p class="church_name"><?php the_field("church_name"); ?></p>
+    <p class="church_city"><?php the_field("city"); ?>, <?php the_field("state"); ?></p>
+    <p class="toggle-link"><a href="#">Learn More</a>
+    <div class="position_text toggle-container">
+		<?php if($post->post_content==" ") : ?>
+		<?php echo '<p>There is no additional information.</p>'; ?>
+		<?php else : ?>
+		<div class="position_text_content"><?php the_content(); ?></div>
+		<?php endif; ?>
+    	<div class="contact_text">
+    		<h4>For more Information Contact:</h4>
+	    	<p><?php the_field("contact_name"); ?></p>
+	    	<p><?php the_field("contact_phone"); ?></p>
+	    	<p><?php the_field("contact_email"); ?></p>
+    	</div>
+    </div>
+</div> <!-- .position_item -->
+
+<?php
+
+}
+
+endif;
+
+
+
+
+
+
+/**
+ * Handles the leadership information used to create leadership PAGE
+ *
+ */
+if ( ! function_exists( 'arizona_district_leadership' ) ) :
+
+function arizona_district_leadership() { ?>
+
+
+<div class="leadership-item wrapper">
+	<div class="leadership_photo col-3-12">
+		<?php $image = get_field('leadership_photo');
+		if( !empty($image) ):
+			$url = $image['url'];
+			$size = 'thumbnail';
+			$thumb = $image['sizes'][ $size ];?>
+			<a href="<?php the_permalink(); ?>"><img src="<?php echo $thumb; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+		<?php endif; ?>
+	</div>
+	<div class="leadership_info col-6-12">
+		<h3><?php the_title(); ?></h3>
+		<h5><?php the_field("leadership_title"); ?></h5>
+		<p class="support-text"><?php the_field("leadership_phone"); ?></p>
+		<p class="support-text"><?php the_field("leadership_email"); ?></p>
+		<p class="support-text"><a href="<?php the_permalink(); ?>">View Profile</a></p>
+	</div>
+	<div class="social-links col-3-12">
+		<?php if( get_field('leadership_facebook') ) { ?><p class="support-text"><a href="<?php the_field('leadership_facebook'); ?>">Facebook</a></p><?php } ?>
+		<?php if( get_field('leadership_twitter') ) { ?><p class="support-text"><a href="<?php the_field('leadership_twitter'); ?>">Twitter</a></p><?php } ?>
+		<?php if( get_field('leadership_instagram') ) { ?><p class="support-text"><a href="<?php the_field('leadership_instagram'); ?>">Instagram</a></p><?php } ?>
+	</div>
+</div>
+
+<?php
+
+}
+
+endif;
+
+
+
+
+
+/**
+ * Create Sidebar list of leadership, used on the single leadership pages.
+ *
+ */
+if ( ! function_exists( 'arizona_district_leadership_sidebar' ) ) :
+
+function arizona_district_leadership_sidebar() {
+
+
+$children = wp_list_pages('title_li=&depth=1&echo=0&post_type=leadership');
+
+?> <ul> <?php
+	echo $children;
+?> </ul> <?php
+
+}
+
+endif;
+
+
+
+/**
+ * Create Sidebar list of Video and Audio Categories used on Video/Audio Sidebar.
+ *
+ */
+if ( ! function_exists( 'arizona_district_vide_audio_sidebar' ) ) :
+
+function arizona_district_vide_audio_sidebar() {
+
+?> <ul>
+<?php wp_list_categories('title_li='); ?>
+</ul>
+<?php
+}
+
+endif;
+
+
+
+
+/**
+ * Create Sidebar list for Church Search pages.
+ *
+ */
+if ( ! function_exists( 'arizona_district_church_sidebar' ) ) :
+
+function arizona_district_church_sidebar() {
+
+
+$children = wp_list_pages('title_li=&depth=1&echo=0&parent=11');
+
+?> <ul> <?php
+	echo $children;
+?> </ul> <?php
 
 }
 

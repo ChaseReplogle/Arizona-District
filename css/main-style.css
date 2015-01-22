@@ -144,14 +144,26 @@ hr { background: #ECECEC; }
 
 .wp-caption-text { font-size: 14px; font-style: italic; color: #a3a3a3; text-align: left; font-weight: 200; }
 
+table { border: 1px solid #dfdfdf; border-right: 0px; border-bottom: 0px; margin-bottom: 25px; }
+
+table tr td { border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf; padding: 15px 20px; font-size: 15px; }
+
+table tr.table-header { background: #f7f7f7; }
+
+.by-line { display: block; font-weight: 400; font-size: 25px; line-height: 30px; margin-top: 10px; }
+
 /*--------------------------------------------------------------
 Support Menu Styles
 --------------------------------------------------------------*/
 .header-support { background-color: #4a4a4a; padding: 0px 20px; }
 
-.header-support__menu ul { float: right; }
+.header-support__menu { float: right; }
 
-.header-support__menu .menu-item a { color: #dfdfdf; font-size: 12px; padding: 8px 8px; font-weight: 200; }
+.menu-support-menu-container { float: right; }
+
+.header-support__menu .menu-item { float: left; display: inline; }
+
+.header-support__menu .menu-item a { color: #dfdfdf; font-size: 12px; padding: 8px 8px; font-weight: 200; display: inline-block; }
 .header-support__menu .menu-item a:hover { color: white; }
 
 /*--------------------------------------------------------------
@@ -167,6 +179,8 @@ Primary Menu Styles
 .header__branding__logo img { width: 100%; height: auto; padding: 20px 0px 15px 0px; }
 
 .header__menu { float: right; width: auto; }
+
+.header__menu ul { float: right; }
 
 .header__menu .menu-item a { color: #4a4a4a; font-size: 16px; padding: 0px 15px; line-height: 98px; font-weight: 400; }
 .header__menu .menu-item a:hover { color: #288c84; }
@@ -263,7 +277,7 @@ Page with Sidebar Navigation
 
 .sidebar li { list-style: none; margin: 0px; padding: 0px; }
 
-.sidebar li a { display: block; text-decoration: none; font-size: 16px; font-weight: 400; color: #7d7d7d; padding: 17px 0px; border-bottom: 1px solid #ececec; }
+.sidebar li a { display: block; text-decoration: none; font-size: 16px; font-weight: 400; color: #7d7d7d; padding: 17px 15px 17px 0px; border-bottom: 1px solid #ececec; }
 
 .sidebar li.current_page_item a { color: #288c84; font-weight: 600; }
 
@@ -272,21 +286,37 @@ Inner Page Header and Breadcrumb Navigation
 --------------------------------------------------------------*/
 .page-inner-header { background: white; padding: 50px 0px; border-bottom: 1px solid #dfdfdf; position: relative; overflow: hidden; }
 
-.page-inner-header h2 { color: white; font-weight: 200; font-size: 40px; margin-bottom: 10px; position: relative; z-index: 10; text-transform: inherit; }
+.page-inner-header h2 { color: white; font-weight: 200; font-size: 40px; margin-bottom: 10px; position: relative; z-index: 10; text-transform: inherit; margin-top: 0px; }
 @media screen and (max-width: 1140px) { .page-inner-header h2 { padding-left: 30px; } }
 
-#crumbs { z-index: 10; position: relative; padding: 0px; line-height: 18px; }
+#crumbs { z-index: 10; position: relative; padding: 0px; line-height: 18px; font-size: 13px; color: #ABD2BD; padding: 0px 2px; font-weight: 200; text-decoration: none; }
 @media screen and (max-width: 1140px) { #crumbs { padding-left: 30px; padding-right: 30px; } }
 
-#crumbs a, #crumbs span { font-size: 13px; color: white; padding: 0px 2px; font-weight: 200; text-decoration: none; opacity: 1; }
+#crumbs a { opacity: 1; color: white; }
 
-#crumbs span { opacity: .6; }
+#crumbs a, #crumbs span { font-size: 13px; padding: 0px 2px; font-weight: 200; text-decoration: none; opacity: 1; }
+
+#crumbs span { padding-right: 5px; }
 
 #crumbs a:first-child { padding-left: 0px; }
 
 #crumbs a:hover { text-decoration: underline; opacity: 1; }
 
 .page-inner-header .gradient { position: absolute; width: 100%; height: 100%; top: 0px; background: #288c84; background: #288c84; background: -moz-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -webkit-gradient(left top, right top, color-stop(0%, #288c84), color-stop(57%, #6fa778), color-stop(100%, #bfd49f)); background: -webkit-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -o-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -ms-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: linear-gradient(to right, #288c84 0%, #6fa778 57%, #bfd49f 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 ); z-index: 5; opacity: .85; }
+
+.page-template-page-navigation .child-page-navigational { background: #fafafa; border: 1px solid #ececec; padding: 30px 5%; margin-bottom: 20px; }
+.page-template-page-navigation .child-page-navigational h4 { margin: 0px 0px 15px 0px; }
+.page-template-page-navigation .child-page-navigational h4 a { text-decoration: none; }
+.page-template-page-navigation .child-page-navigational p { font-size: 16px; }
+
+ol.wp-paginate { margin: 0px; margin-top: 25px; }
+
+ol.wp-paginate .title { display: none; }
+
+ol.wp-paginate .page, ol.wp-paginate .prev, ol.wp-paginate .next { padding: 5px 10px; margin: 0px; display: inline-block; background-color: #f7f7f7; margin-right: 3px; font-size: 14px; }
+ol.wp-paginate .page:hover, ol.wp-paginate .prev:hover, ol.wp-paginate .next:hover { background-color: #dfdfdf; }
+
+ol.wp-paginate .page.current { background-color: #4a4a4a; border: 1px solid #a7591e; }
 
 .button { border-radius: 10px; background-color: #f7f7f7; color: #4a4a4a; font-size: 15px; padding: 18px 50px; border: 1px solid #dfdfdf; text-align: center; width: auto; font-weight: 300; text-decoration: none; margin-bottom: 30px; }
 .button:hover { background-color: #fafafa; }
@@ -326,7 +356,7 @@ Main Content Area
 --------------------------------------------------------------*/
 .page-with-sidebar .site-main { background: #fff; padding: 70px 5%; border-left: 1px solid #dfdfdf; margin: 0px; }
 
-.site-footer { background: url("../images/monument_valley.jpg") no-repeat top center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/monument_valley.jpg', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/monument_valley.jpg', sizingMethod='scale')"; border-top: 1px solid black; }
+.site-footer { background: #4a4a4a; background: url("../images/monument_valley.jpg") no-repeat top center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/monument_valley.jpg', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/monument_valley.jpg', sizingMethod='scale')"; border-top: 1px solid black; }
 
 .site-footer p { color: #c6c6c6; font-weight: 200; margin-bottom: 10px; }
 @media screen and (max-width: 768px) { .site-footer p { color: white; } }
@@ -425,36 +455,36 @@ Main Header
 /*--------------------------------------------------------------
 Home Tabs
 --------------------------------------------------------------*/
-.tab-content { display: none; background: black; backgroud-color: black; }
+.home .tab-content { display: none; background: black; backgroud-color: black; }
 
 #tab-1 { display: block; }
 
-.tabs-menu { background: #4a4a4a; border-bottom: 1px solid black; border-top: 1px solid black; }
+.home .tabs-menu { background: #4a4a4a; border-bottom: 1px solid black; border-top: 1px solid black; }
 
-.tabs-menu li { width: 25%; float: left; display: block; }
-.tabs-menu li:last-child a { border-right: 1px solid black; }
-@media screen and (max-width: 460px) { .tabs-menu li { width: 50%; } }
+.home .tabs-menu li { width: 25%; float: left; display: block; }
+.home .tabs-menu li:last-child a { border-right: 1px solid black; }
+@media screen and (max-width: 460px) { .home .tabs-menu li { width: 50%; } }
 
-.tabs-menu a { display: block; text-align: center; background: #4a4a4a; border-right: 1px solid black; color: white; text-decoration: none; font-weight: 200; padding: 20px 0px; }
-.tabs-menu a:hover { background: #575757; }
-@media screen and (max-width: 600px) { .tabs-menu a { font-size: 14px; } }
+.home .tabs-menu a { display: block; text-align: center; background: #4a4a4a; border-right: 1px solid black; color: white; text-decoration: none; font-weight: 200; padding: 20px 0px; }
+.home .tabs-menu a:hover { background: #575757; }
+@media screen and (max-width: 600px) { .home .tabs-menu a { font-size: 14px; } }
 
-.tabs-menu .current a { background: #288c84; }
+.home .tabs-menu .current a { background: #288c84; }
 
-.tab-content { position: relative; overflow: hidden; background: black; backgroud-color: black; }
+.home .tab-content { position: relative; overflow: hidden; background: black; backgroud-color: black; }
 
-.tab-content .gradient { background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.78)), color-stop(100%, rgba(0, 0, 0, 0))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* IE10+ */ background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c7000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */ }
-@media screen and (max-width: 600px) { .tab-content .gradient { background: rgba(0, 0, 0, 0.7); } }
+.home .tab-content .gradient { background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.78)), color-stop(100%, rgba(0, 0, 0, 0))); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* IE10+ */ background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c7000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */ }
+@media screen and (max-width: 600px) { .home .tab-content .gradient { background: rgba(0, 0, 0, 0.7); } }
 
-.tab-content-text { width: 50%; padding: 0px 0px 220px 40px; }
-@media screen and (max-width: 600px) { .tab-content-text { width: 100%; padding: 0px 40px 60px 40px; } }
+.home .tab-content-text { width: 50%; padding: 0px 0px 220px 40px; }
+@media screen and (max-width: 600px) { .home .tab-content-text { width: 100%; padding: 0px 40px 60px 40px; } }
 
-.tab-content-text h2 { color: white; font-weight: 200; font-size: 30px; padding-top: 100px; margin-bottom: 15px; }
-@media screen and (max-width: 600px) { .tab-content-text h2 { padding-top: 50px; } }
+.home .tab-content-text h2 { color: white; font-weight: 200; font-size: 30px; padding-top: 100px; margin-bottom: 15px; }
+@media screen and (max-width: 600px) { .home .tab-content-text h2 { padding-top: 50px; } }
 
-.tab-content-text p { color: white; font-weight: 200; font-size: 17px; margin-bottom: 25px; }
+.home .tab-content-text p { color: white; font-weight: 200; font-size: 17px; margin-bottom: 25px; }
 
-.tab-content-text a { color: #288c84; font-weight: 200; font-size: 17px; margin-bottom: 12px; display: block; }
+.home .tab-content-text a { color: #288c84; font-weight: 200; font-size: 17px; margin-bottom: 12px; display: block; }
 
 /*--------------------------------------------------------------
 Instagram Bar
@@ -473,7 +503,7 @@ Instagram Bar
 /*--------------------------------------------------------------
 Resource Bar
 --------------------------------------------------------------*/
-.resource-bar { background-image: -o-linear-gradient(179deg, #f89838 0%, #f76b1c 100%); background-image: -moz-linear-gradient(179deg, #f89838 0%, #f76b1c 100%); background-image: -ms-linear-gradient(179deg, #f89838 0%, #f76b1c 100%); background-image: linear-gradient(269deg, #f89838 0%, #f76b1c 100%); border-top: 1px solid black; padding: 30px 20px; }
+.resource-bar { background-color: #d27026; background-image: -o-linear-gradient(179deg, #f89838 0%, #f76b1c 100%); background-image: -moz-linear-gradient(179deg, #f89838 0%, #f76b1c 100%); background-image: -ms-linear-gradient(179deg, #f89838 0%, #f76b1c 100%); background-image: linear-gradient(269deg, #f89838 0%, #f76b1c 100%); border-top: 1px solid black; padding: 30px 20px; }
 
 .resource-bar-item { width: 18.5%; float: left; display: block; }
 @media screen and (max-width: 768px) { .resource-bar-item { width: 25%; } }
@@ -515,3 +545,176 @@ Document Shortcode
 .document a.title { color: #4a4a4a; font-weight: 400; font-size: 20px; margin-bottom: 5px; text-decoration: none; font-family: "adelle", "open-sans",sans-serif; }
 
 .document a.title span { font-size: 16px; color: #646464; font-weight: 200; }
+
+/*--------------------------------------------------------------
+Notification Boxes
+--------------------------------------------------------------*/
+.notification { display: block; margin-bottom: 30px; padding: 15px 4%; font-size: 15px; }
+
+.notification p { margin-bottom: 0px; }
+
+.notification-green { background: #ecfaf9; border: 1px solid #b1e9e4; }
+.notification-green p { color: #1d645f; }
+
+/*--------------------------------------------------------------
+Open Positions
+--------------------------------------------------------------*/
+.tab-content { display: none; }
+
+.tab > .tab-content:first-of-type { display: block; }
+
+.position_item { background: #fafafa; border: 1px solid #ececec; padding: 30px 5%; margin-bottom: 20px; }
+
+.position_item a { font-size: 14px; }
+
+.position_item .position_text { display: none; }
+
+.position_item .church_name { width: 50%; float: left; margin-bottom: 5px; }
+@media screen and (max-width: 768px) { .position_item .church_name { width: 100%; float: none; } }
+
+.position_item .church_city { width: 50%; float: right; text-align: right; margin-bottom: 5px; }
+@media screen and (max-width: 768px) { .position_item .church_city { width: 100%; float: none; text-align: left; } }
+
+.position_item h2 { margin-bottom: 0px; margin-top: 0px; }
+
+.position_item h2 span.type { font-size: 19px; font-weight: 400; float: right; text-transform: capitalize; color: #cacaca; }
+@media screen and (max-width: 768px) { .position_item h2 span.type { display: none; } }
+
+.position_item h2 span.new { font-size: 12px; padding: 5px 12px; font-weight: 400; background: #d27026; color: white; margin: 10px 0px 0px 10px; position: absolute; line-height: 15px; }
+
+.position_item .support-text { margin-bottom: 0px; font-style: italic; font-weight: 200; color: #b0b0b0; }
+
+.page-template-page-positions .tabs-menu { margin: 0px; margin-bottom: 40px; display: block; }
+.page-template-page-positions .tabs-menu li { width: 33.333%; list-style: none; margin: 0px; padding: 0px; display: block; float: left; border: 1px solid #dfdfdf; border-right: 0px; }
+.page-template-page-positions .tabs-menu li a { text-decoration: none; padding: 20px; background-color: #f7f7f7; display: block; color: #4a4a4a; text-align: center; font-size: 16px; }
+.page-template-page-positions .tabs-menu li:last-child { border-right: 1px solid #dfdfdf; }
+
+.position_text p, .position_text li { font-size: 15px; line-height: 20px; margin-bottom: 5px; display: block; }
+
+.position_text_content p:first-of-type { border-top: 1px solid #dfdfdf; padding-top: 20px; }
+
+.position_text_content { border-bottom: 1px solid #dfdfdf; }
+
+.contact_text h4 { margin-top: 20px; margin-bottom: 5px; font-size: 20px; font-weight: 600; }
+
+.page-template-page-positions ul.tabs-menu li.current a { background-color: white; }
+
+/*--------------------------------------------------------------
+Event Calendar Styles
+--------------------------------------------------------------*/
+.page-template-page-calendar-php .entry-content { margin-top: 0px; }
+
+.tribe-events-promo { display: none; }
+
+.tribe-bar-disabled #tribe-bar-views .tribe-bar-views-list, .tribe-bar-disabled #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option { font-size: 14px; }
+
+.tribe-bar-is-disabled h2.tribe-events-page-title { font-family: "open-sans",sans-serif; line-height: 45px; font-size: 35px; text-align: left; font-weight: 600; color: #4a4a4a; text-transform: uppercase; display: block; width: 100%; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #dfdfdf; margin-bottom: 0px; }
+
+.tribe-bar-is-disabled h2.tribe-events-page-title a { display: block; font-size: 18px; color: #797979; text-transform: capitalize; font-weight: 400; line-height: 30px; }
+
+.full_calendar { margin-bottom: 40px; }
+
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav li { width: 50%; margin: 0px; padding: 0px; background: #f7f7f7; margin-top: 30px; }
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous a, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next a, #tribe-events-header .tribe-events-sub-nav li a { font-weight: 400; color: #4a4a4a; padding: 30px 5%; border: 1px solid #dfdfdf; display: block; }
+
+#tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title { color: #288c84; font-weight: 400; }
+
+#tribe-events .tribe-events-button, #tribe-events .tribe-events-button:hover, #tribe_events_filters_wrapper input[type=submit], .tribe-events-button, .tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a { background-color: #288c84; }
+
+#tribe-events-content .tribe-events-tooltip h4 { color: #288c84; font-weight: 300; }
+
+.single-tribe_events .tribe-events-sub-nav { display: none; }
+
+.tribe-events-list div.type-tribe_events { background: #fafafa; border: 1px solid #ececec; padding: 30px 5%; margin-bottom: 20px; }
+
+.tribe-events-list .time-details { padding: 0px; }
+
+.tribe-events-loop .tribe-events-event-meta { padding: 0px; background: transparent; border: 0px; }
+
+.tribe-events-list-event-description { margin-top: 0px; }
+
+.tribe-events-read-more { font-size: 15px; }
+
+/*--------------------------------------------------------------
+Leadership Page and Module Styles
+--------------------------------------------------------------*/
+.leadership-item { position: relative; background: #fafafa; border: 1px solid #ececec; padding: 30px 5%; margin-bottom: 20px; }
+.leadership-item .leadership_info { padding: 0px; margin: 0px; }
+.leadership-item img { width: 100%; height: auto; }
+.leadership-item h3 { margin: 0px; margin-top: 0px; margin-left: 7%; }
+.leadership-item h5 { margin-bottom: 8px; margin-left: 7%; }
+.leadership-item p.support-text { margin: 0px; line-height: 20px; margin-left: 7%; }
+.leadership-item p.support-text a { margin-top: 10px; display: block; }
+
+.leadership-item-module { padding: 40px 5%; background-color: #fcfcfc; border: 1px solid #dfdfdf; }
+
+.single-leadership .leadership-item-module { margin-top: 40px; }
+
+/*--------------------------------------------------------------
+Media, Video and Audio
+--------------------------------------------------------------*/
+.video_audio-item h3 { margin: 0px; }
+
+.video_audio-item a { text-decoration: none; }
+
+.video_audio-item p.support-text { margin: 0px; }
+
+.video_audio-item img { border: 1px solid #4a4a4a; }
+
+.video_audio-item ul.post-categories { margin: 0px; margin-left: 0px; margin-top: 10px; list-style: none; }
+
+.video_audio-item ul.post-categories li { margin: 0px; padding: 0px; }
+
+.video_audio-item ul.post-categories li a { font-size: 14px; }
+
+audio { width: 100%; }
+
+.media-item { margin-bottom: 30px; }
+
+/*--------------------------------------------------------------
+Archive and Sidebar Search
+--------------------------------------------------------------*/
+.archive-item { background: #fafafa; border: 1px solid #ececec; padding: 30px 5%; margin-bottom: 20px; }
+.archive-item .support-text { margin-bottom: 5px; }
+.archive-item h3 { margin-top: 0px; }
+
+.sidebar-searchform #search-options-link { padding: 0px 0px 15px 0px; text-align: left; color: #4a4a4a; }
+
+.sidebar-searchform #s { width: 75%; border-radius: 0px; margin-right: 10%; padding: 15px 5%; border: 1px solid #ececec; }
+
+.sidebar-searchform #searchsubmit { width: 87%; border-radius: 0px; margin-right: 20%; margin-top: 10px; padding: 15px 0px; border: 1px; }
+
+/*--------------------------------------------------------------
+Find A Church Search
+--------------------------------------------------------------*/
+.church-tab p.support-text { margin-bottom: 10px; text-align: left; }
+
+.church-search-tabs { margin-bottom: 20px; }
+.church-search-tabs li { width: 33.333%; background: #fafafa; border: 1px solid #ececec; border-right: 0px; float: left; text-align: center; color: #4a4a4a; font-size: 14px; }
+.church-search-tabs li a { text-align: center; text-decoration: none; color: #4a4a4a; font-size: 16px; display: block; width: 100%; padding: 15px 0px; }
+.church-search-tabs li:last-child { border-right: 1px solid #ececec; }
+.church-search-tabs li.current { background: white; }
+
+.church-tab { margin-bottom: 50px; }
+
+.az-char { float: left; padding-right: 2.2%; color: #ececec; }
+.az-char a { text-decoration: none; }
+.az-char a:hover { text-decoration: underline; }
+
+.az-char.current-menu-item a { color: #d27026; }
+
+.church-searchform #s { width: 73.5%; margin-right: 0px; padding: 15px 3%; }
+
+.church-searchform #searchsubmit { width: 20%; margin-right: 0px; border: 1px solid #c6c6c6; }
+
+.tax_nav { margin-bottom: 25px; }
+
+.tax_nav .support-text { margin-bottom: 5px; }
+
+.church-label { color: #288c84; opacity: .7; }
+
+.page-with-sidebar .single-church-main { position: relative; padding-bottom: 450px; display: block; }
+
+.direction_link { display: block; font-size: 14px; color: #b0b0b0; margin-top: 5px; }
+
+.acf-map { width: 100%; left: 0px; height: 400px; border: #ccc solid 1px; position: absolute; bottom: 0px; }

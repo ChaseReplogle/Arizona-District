@@ -14,6 +14,7 @@ Main Content Area
 
 
 .site-footer {
+	background: $gray-dark;
 	background: url('../images/monument_valley.jpg') no-repeat top center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -384,7 +385,7 @@ Home Tabs
 --------------------------------------------------------------*/
 
 
-.tab-content {
+.home .tab-content {
 	display: none;
 	background: black;
 	backgroud-color: black;
@@ -394,13 +395,13 @@ Home Tabs
 	display: block;
 }
 
-.tabs-menu {
+.home .tabs-menu {
 	background: $gray-dark;
 	border-bottom: 1px solid black;
 	border-top: 1px solid black;
 }
 
-.tabs-menu li {
+.home .tabs-menu li {
 	width: 25%;
 	float: left;
 	display: block;
@@ -414,7 +415,7 @@ Home Tabs
 	}
 }
 
-	.tabs-menu a {
+	.home .tabs-menu a {
 		display: block;
 		text-align: center;
 		background: $gray-dark;
@@ -433,18 +434,18 @@ Home Tabs
 		}
 	}
 
-	.tabs-menu .current a {
+	.home .tabs-menu .current a {
 		background: $green;
 	}
 
-	.tab-content {
+	.home .tab-content {
 		position: relative;
 		overflow: hidden;
 		background: black;
 		backgroud-color: black;
 	}
 
-	.tab-content .gradient {
+	.home .tab-content .gradient {
 		background: -moz-linear-gradient(left,  rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.78)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(left,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -458,7 +459,7 @@ Home Tabs
 			}
 	}
 
-	.tab-content-text {
+	.home .tab-content-text {
 		width: 50%;
 		padding: 0px 0px 220px 40px;
 
@@ -468,7 +469,7 @@ Home Tabs
 			}
 	}
 
-		.tab-content-text h2 {
+		.home .tab-content-text h2 {
 			color: $white;
 			font-weight: 200;
 			font-size: 30px;
@@ -480,14 +481,14 @@ Home Tabs
 			}
 		}
 
-		.tab-content-text p {
+		.home .tab-content-text p {
 			color: $white;
 			font-weight: 200;
 			font-size: 17px;
 			margin-bottom: 25px;
 		}
 
-		.tab-content-text a {
+		.home .tab-content-text a {
 			color: $green;
 			font-weight: 200;
 			font-size: 17px;
@@ -552,6 +553,7 @@ Resource Bar
 --------------------------------------------------------------*/
 
 .resource-bar {
+	background-color: $orange;
 	background-image: -o-linear-gradient(179deg, #f89838 0%, #F76B1C 100%);
 	background-image: -moz-linear-gradient(179deg, #f89838 0%, #F76B1C 100%);
 	background-image: -ms-linear-gradient(179deg, #f89838 0%, #F76B1C 100%);
@@ -726,3 +728,585 @@ Document Shortcode
 		color: lighten($gray-dark, 10%);
 		font-weight: 200;
 	}
+
+
+
+
+/*--------------------------------------------------------------
+Notification Boxes
+--------------------------------------------------------------*/
+
+.notification {
+	display: block;
+	margin-bottom: 30px;
+	padding: 15px 4%;
+	font-size: 15px;
+}
+
+	.notification p {
+		margin-bottom: 0px;
+	}
+
+
+	.notification-green {
+		background: lighten($green, 60%);
+		border: 1px solid lighten($green, 45%);
+
+		p {
+			color: darken($green, 10%);
+		}
+	}
+
+
+
+
+/*--------------------------------------------------------------
+Open Positions
+--------------------------------------------------------------*/
+
+.tab-content {
+	display: none;
+}
+
+.tab > .tab-content:first-of-type {
+	display: block;
+}
+
+.position_item {
+	background: lighten($gray-light, 1%);
+	border: 1px solid lighten($gray, 5%);
+	padding: 30px 5%;
+	margin-bottom: 20px;
+}
+
+	.position_item a {
+		font-size: 14px;
+	}
+
+
+	.position_item .position_text {
+		display: none;
+	}
+
+	.position_item .church_name {
+		width: 50%;
+		float: left;
+		margin-bottom: 5px;
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	.position_item .church_city {
+		width: 50%;
+		float: right;
+		text-align: right;
+		margin-bottom: 5px;
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			float: none;
+			text-align: left;
+		}
+	}
+
+	.position_item h2 {
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	.position_item h2 span.type {
+		font-size: 19px;
+		font-weight: 400;
+		float: right;
+		text-transform: capitalize;
+		color: lighten($gray-dark, 50%);
+
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.position_item h2 span.new {
+		font-size: 12px;
+		padding: 5px 12px;
+		font-weight: 400;
+		background: $orange;
+		color: $white;
+		margin: 10px 0px 0px 10px;
+		position: absolute;
+		line-height: 15px;
+	}
+
+	.position_item .support-text {
+		margin-bottom: 0px;
+		font-style: italic;
+		font-weight: 200;
+		color: lighten($gray-dark, 40%);
+
+	}
+
+.page-template-page-positions .tabs-menu {
+	margin: 0px;
+	margin-bottom: 40px;
+	display: block;
+
+	li {
+		width: 33.333%;
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+		display: block;
+		float: left;
+		border: 1px solid $gray;
+		border-right: 0px;
+
+		a {
+			text-decoration: none;
+			padding: 20px;
+			background-color: $gray-light;
+			display: block;
+			color: $gray-dark;
+			text-align: center;
+			font-size: 16px;
+		}
+
+		&:last-child {
+			border-right: 1px solid $gray;
+		}
+	}
+}
+
+.position_text p, .position_text li {
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	display: block;
+}
+
+.position_text_content p:first-of-type {
+	border-top: 1px solid $gray;
+	padding-top: 20px;
+}
+
+.position_text_content {
+	border-bottom: 1px solid $gray;
+}
+
+.contact_text h4 {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+
+.page-template-page-positions ul.tabs-menu li.current a {
+	background-color: $white;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+Event Calendar Styles
+--------------------------------------------------------------*/
+
+.page-template-page-calendar-php .entry-content {
+	margin-top: 0px;
+}
+
+.tribe-events-promo {
+	display: none;
+}
+
+.tribe-bar-disabled {
+
+}
+
+.tribe-bar-disabled #tribe-bar-views .tribe-bar-views-list, .tribe-bar-disabled #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option {
+	font-size: 14px;
+}
+
+.tribe-bar-is-disabled h2.tribe-events-page-title {
+	font-family:"open-sans",sans-serif;
+	line-height: 45px;
+	font-size: 35px;
+	text-align: left;
+	font-weight: 600;
+	color: $gray-dark;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+
+	margin-bottom: 40px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid $gray;
+	margin-bottom: 0px;
+}
+
+	.tribe-bar-is-disabled h2.tribe-events-page-title a {
+		display: block;
+		font-size: 18px;
+		color: darken($gray, 40%);
+		text-transform: capitalize;
+		font-weight: 400;
+		line-height: 30px;
+	}
+
+.full_calendar {
+	margin-bottom: 40px;
+}
+
+.tribe-bar-disabled .tribe-bar-filters .tribe-bar-date-filter, .tribe-bar-disabled #tribe-bar-form #tribe-bar-views .tribe-bar-views-inner {
+
+}
+
+#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav li {
+	width: 50%;
+	margin: 0px;
+	padding: 0px;
+	background: $gray-light;
+	margin-top: 30px;
+
+	a {
+		font-weight: 400;
+		color: $gray-dark;
+		padding: 30px 5%;
+		border: 1px solid $gray;
+		display: block;
+	}
+}
+
+
+
+#tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
+	color: $green;
+	font-weight: 400;
+}
+
+#tribe-events .tribe-events-button, #tribe-events .tribe-events-button:hover, #tribe_events_filters_wrapper input[type=submit], .tribe-events-button, .tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+	background-color: $green;
+}
+
+#tribe-events-content .tribe-events-tooltip h4 {
+	color: $green;
+	font-weight: 300;
+}
+
+.single-tribe_events .tribe-events-sub-nav {
+	display: none;
+}
+
+
+.tribe-events-list div.type-tribe_events {
+	background: lighten($gray-light, 1%);
+	border: 1px solid lighten($gray, 5%);
+	padding: 30px 5%;
+	margin-bottom: 20px;
+}
+
+	.tribe-events-list .time-details {
+		padding: 0px;
+	}
+
+	.tribe-events-loop .tribe-events-event-meta {
+		padding: 0px;
+		background: transparent;
+		border: 0px;
+	}
+
+	.tribe-events-list-event-description {
+		margin-top: 0px;
+	}
+
+	.tribe-events-read-more {
+		font-size: 15px;
+	}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+Leadership Page and Module Styles
+--------------------------------------------------------------*/
+
+
+	.leadership-item {
+		position: relative;
+		background: lighten($gray-light, 1%);
+		border: 1px solid lighten($gray, 5%);
+		padding: 30px 5%;
+		margin-bottom: 20px;
+
+		.leadership_photo {
+		}
+
+		.leadership_info {
+			padding: 0px;
+			margin: 0px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		h3 {
+			margin: 0px;
+			margin-top: 0px;
+			margin-left: 7%;
+		}
+
+		h5 {
+			margin-bottom: 8px;
+			margin-left: 7%;
+		}
+
+		p.support-text {
+			margin: 0px;
+			line-height: 20px;
+			margin-left: 7%;
+		}
+
+		p.support-text a {
+			margin-top: 10px;
+			display: block;
+		}
+	}
+
+.leadership-item-module {
+	padding: 40px 5%;
+	background-color: lighten($gray-light, 2%);
+	border: 1px solid $gray;
+}
+
+.single-leadership .leadership-item-module {
+	margin-top: 40px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+Media, Video and Audio
+--------------------------------------------------------------*/
+
+.video_audio-item {
+
+}
+
+.video_audio-item h3 {
+	margin: 0px;
+}
+
+.video_audio-item a {
+	text-decoration: none;
+}
+
+.video_audio-item p.support-text {
+	margin: 0px;
+}
+
+.video_audio-item img {
+	border: 1px solid $gray-dark;
+}
+
+.video_audio-item ul.post-categories {
+	margin: 0px;
+	margin-left: 0px;
+	margin-top: 10px;
+	list-style: none;
+}
+
+.video_audio-item ul.post-categories li {
+	margin: 0px;
+	padding: 0px;
+}
+
+.video_audio-item ul.post-categories li a {
+	font-size: 14px;
+}
+
+audio {
+	width: 100%;
+}
+
+.media-item {
+	margin-bottom: 30px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+Archive and Sidebar Search
+--------------------------------------------------------------*/
+
+
+.archive-item {
+	background: lighten($gray-light, 1%);
+	border: 1px solid lighten($gray, 5%);
+	padding: 30px 5%;
+	margin-bottom: 20px;
+
+	.support-text {
+		margin-bottom: 5px;
+	}
+
+	h3 {
+		margin-top: 0px;
+	}
+}
+
+.sidebar-searchform #search-options-link {
+	padding: 0px 0px 15px 0px;
+	text-align: left;
+	color: $gray-dark;
+}
+
+.sidebar-searchform #s {
+	width: 75%;
+	border-radius: 0px;
+	margin-right: 10%;
+	padding: 15px 5%;
+	border: 1px solid lighten($gray, 5%);
+
+}
+
+.sidebar-searchform #searchsubmit {
+	width: 87%;
+	border-radius: 0px;
+	margin-right: 20%;
+	margin-top: 10px;
+	padding: 15px 0px;
+	border: 1px
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+Find A Church Search
+--------------------------------------------------------------*/
+
+
+.church-tab p.support-text {
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.church-search-tabs {
+	margin-bottom: 20px;
+
+	li {
+		width: 33.333%;
+		background: lighten($gray-light, 1%);
+		border: 1px solid lighten($gray, 5%);
+		border-right: 0px;
+		float: left;
+		text-align: center;
+		color: $gray-dark;
+		font-size: 14px;
+
+		a {
+			text-align: center;
+			text-decoration: none;
+			color: $gray-dark;
+			font-size: 16px;
+			display: block;
+			width: 100%;
+			padding: 15px 0px;
+		}
+	}
+
+	li:last-child {
+		border-right: 1px solid lighten($gray, 5%);
+	}
+
+	li.current {
+		background: white;
+	}
+}
+
+.church-tab {
+	margin-bottom: 50px;
+}
+
+.az-char {
+	float: left;
+	padding-right: 2.2%;
+	color: lighten($gray, 5%);
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.az-char.current-menu-item a {
+	color: $orange;
+}
+
+
+.church-searchform #s {
+	width: 73.5%;
+	margin-right: 0px;
+	padding: 15px 3%;
+}
+
+.church-searchform #searchsubmit {
+	width: 20%;
+	margin-right: 0px;
+	border: 1px solid darken($gray, 10%);
+}
+
+.tax_nav {
+	margin-bottom: 25px;
+}
+
+.tax_nav .support-text {
+	margin-bottom: 5px;
+}
+
+.church-label {
+	color: $green;
+	opacity: .7;
+}
+
+.page-with-sidebar .single-church-main {
+	position: relative;
+	padding-bottom: 450px;
+	display: block;
+}
+
+.direction_link {
+	display: block;
+	font-size: 14px;
+	color: lighten($gray-dark, 40%);
+	margin-top: 5px;
+}
+
+.acf-map {
+	width: 100%;
+	left: 0px;
+	height: 400px;
+	border: #ccc solid 1px;
+	position: absolute;
+	bottom: 0px;
+}

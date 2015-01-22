@@ -114,6 +114,8 @@ function arizona_district_scripts() {
 
 	wp_enqueue_script( 'arizona-district-count-up-waypoints', 'http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js', array(), '', true );
 
+  wp_enqueue_script( 'arizona-district-google_maps', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '', true );
+
 	wp_enqueue_script( 'arizona-district-count-up', get_template_directory_uri() . '/js/count-up.js', array(), '', true );
 
 	wp_enqueue_script( 'arizona-district-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -328,3 +330,124 @@ function the_breadcrumb() {
     echo '</div>';
   }
 }
+
+
+
+/**
+ * Adjusts the length and removes [...] from the WordPress excerpt.
+ */
+
+function custom_excerpt_length( $length ) {
+  return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function new_excerpt_more($excerpt)
+{
+  return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
+
+
+/**
+ * Adds additional custom post types to category and archive pages.
+ */
+
+function namespace_add_custom_types( $query ) {
+  if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+    $query->set( 'post_type', array(
+     'post', 'nav_menu_item', 'video_audio',
+    ));
+    return $query;
+  }
+}
+add_filter( 'pre_get_posts', 'namespace_add_custom_types' );
+
+
+
+
+/**
+ * Adds hidden taxonomies to be used for the church filtering
+ */
+
+// Add new taxonomy, NOT hierarchical (like tags)
+function arizona_create_glossary_taxonomy(){
+    if(!taxonomy_exists('city_glossary')){
+        register_taxonomy('city_glossary',array('church'),array(
+            'show_ui' => false,
+        ));
+    }
+}
+add_action('init','arizona_create_glossary_taxonomy');
+
+/* When the post is saved, saves our custom data */
+function arizona_save_first_letter( $post_id ) {
+    // verify if this is an auto save routine.
+    // If it is our form has not been submitted, so we dont want to do anything
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+        return $post_id;
+
+    //check location (only run for posts)
+    $limitPostTypes = array('church');
+    if (!in_array($_POST['post_type'], $limitPostTypes))
+        return $post_id;
+
+    // Check permissions
+    if ( !current_user_can( 'edit_post', $post_id ) )
+        return $post_id;
+
+    // OK, we're authenticated: we need to find and save the data
+    $taxonomy = 'city_glossary';
+
+    //set term as first letter of post title, lower case
+    wp_set_post_terms( $post_id, strtolower(substr($_POST['fields']['field_54bfd9fc008ca'], 0, 1)), $taxonomy );
+
+    //delete the transient that is storing the alphabet letters
+    delete_transient( 'arizona_archive_alphabet');
+}
+add_action( 'save_post', 'arizona_save_first_letter' );
+
+
+
+
+
+
+
+// Add new taxonomy, NOT hierarchical (like tags)
+function arizona_create_name_glossary_taxonomy(){
+    if(!taxonomy_exists('name_glossary')){
+        register_taxonomy('name_glossary',array('church'),array(
+            'show_ui' => false
+        ));
+    }
+}
+add_action('init','arizona_create_name_glossary_taxonomy');
+
+/* When the post is saved, saves our custom data */
+function arizona_save_name_first_letter( $post_id ) {
+    // verify if this is an auto save routine.
+    // If it is our form has not been submitted, so we dont want to do anything
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+        return $post_id;
+
+    //check location (only run for posts)
+    $limitPostTypes = array('church');
+    if (!in_array($_POST['post_type'], $limitPostTypes))
+        return $post_id;
+
+    // Check permissions
+    if ( !current_user_can( 'edit_post', $post_id ) )
+        return $post_id;
+
+    // OK, we're authenticated: we need to find and save the data
+    $taxonomy = 'name_glossary';
+
+    //set term as first letter of post title, lower case
+    wp_set_post_terms( $post_id, strtolower(substr($_POST['fields']['field_54bfce84bf332'], 0, 1)), $taxonomy );
+
+    //delete the transient that is storing the alphabet letters
+    delete_transient( 'arizona_archive_alphabet');
+}
+add_action( 'save_post', 'arizona_save_name_first_letter' );

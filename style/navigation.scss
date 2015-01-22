@@ -9,15 +9,20 @@ Support Menu Styles
 }
 
 	.header-support__menu {
-
+			float: right;
 	}
 
 		.header-support__menu ul {
+
+		}
+
+		.menu-support-menu-container {
 			float: right;
 		}
 
 			.header-support__menu .menu-item {
-
+				float: left;
+				display: inline;
 			}
 
 				.header-support__menu .menu-item a {
@@ -25,6 +30,7 @@ Support Menu Styles
 					font-size: 12px;
 					padding: 8px 8px;
 					font-weight: 200;
+					display: inline-block;
 
 					&:hover {
 						color: $white;
@@ -73,7 +79,7 @@ Primary Menu Styles
 	}
 
 		.header__menu ul {
-
+			float: right;
 		}
 
 			.header__menu .menu-item {
@@ -389,7 +395,7 @@ Page with Sidebar Navigation
 		font-size: 16px;
 		font-weight: 400;
 		color: lighten($gray-dark, 20%);
-		padding: 17px 0px;
+		padding: 17px 15px 17px 0px;
 		border-bottom: 1px solid lighten($gray, 5%);
 	}
 
@@ -422,6 +428,7 @@ Inner Page Header and Breadcrumb Navigation
 		  position: relative;
 		  z-index: 10;
 		  text-transform: inherit;
+		  margin-top: 0px;
 
 		@media screen and (max-width: 1140px) {
 			padding-left: 30px;
@@ -433,6 +440,11 @@ Inner Page Header and Breadcrumb Navigation
 		position: relative;
 		padding: 0px;
 		line-height: 18px;
+		font-size: 13px;
+		color: #ABD2BD;
+		padding: 0px 2px;
+		font-weight: 200;
+		text-decoration: none;
 
 		@media screen and (max-width: 1140px) {
 			padding-left: 30px;
@@ -440,9 +452,13 @@ Inner Page Header and Breadcrumb Navigation
 		}
 	}
 
+	#crumbs a {
+		opacity: 1;
+		color: $white;
+	}
+
 	#crumbs a, #crumbs span {
 		font-size: 13px;
-		color: $white;
 		padding: 0px 2px;
 		font-weight: 200;
 		text-decoration: none;
@@ -450,7 +466,7 @@ Inner Page Header and Breadcrumb Navigation
 	}
 
 	#crumbs span {
-		opacity: .6;
+		padding-right: 5px;
 	}
 
 	#crumbs a:first-child {
@@ -478,3 +494,57 @@ background: linear-gradient(to right, rgba(40,140,132,1) 0%, rgba(111,167,120,1)
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 );		z-index: 5;
 		opacity: .85;
 	}
+
+
+
+
+
+
+.page-template-page-navigation .child-page-navigational {
+	background: lighten($gray-light, 1%);
+	border: 1px solid lighten($gray, 5%);
+	padding: 30px 5%;
+	margin-bottom: 20px;
+
+	h4 {
+		margin: 0px 0px 15px 0px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	p {
+		font-size: 16px;
+	}
+}
+
+
+
+
+ol.wp-paginate {
+	margin: 0px;
+	margin-top: 25px;
+}
+
+ol.wp-paginate .title {
+	display: none;
+}
+
+ol.wp-paginate .page, ol.wp-paginate .prev, ol.wp-paginate .next {
+	padding: 5px 10px;
+	margin: 0px;
+	display: inline-block;
+	background-color: $gray-light;
+	margin-right: 3px;
+	font-size: 14px;
+
+	&:hover {
+		background-color: $gray;
+	}
+}
+
+ol.wp-paginate .page.current {
+	background-color: $gray-dark;
+	border: 1px solid darken($orange, 10%);
+}
