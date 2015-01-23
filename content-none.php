@@ -21,12 +21,12 @@
 		<?php elseif ( is_search() ) : ?>
 
 			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'arizona-district' ); ?></p>
-			<?php get_search_form(); ?>
+			<?php get_template_part( 'searchform', 'sidebar' );  ?>
 
 		<?php else : ?>
 
 			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'arizona-district' ); ?></p>
-			<?php get_search_form(); ?>
+			<?php get_template_part( 'searchform', 'sidebar' );  ?>
 
 		<?php endif; ?>
 	</div><!-- .page-content -->

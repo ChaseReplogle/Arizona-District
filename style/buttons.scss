@@ -46,3 +46,55 @@
 		background-color: lighten($orange, 10%);
 	}
 }
+
+.gform_button {
+	background-color: $orange;
+	display: block;
+	width: 100%;
+	border-color: darken($orange, 5%);
+	color: $white;
+	padding: 20px 0px;
+
+	&:hover {
+		background-color: lighten($orange, 10%);
+	}
+}
+
+
+.header-with-button {
+	border-bottom: 1px solid $gray;
+}
+
+.header-with-button h1 {
+	width: 80%;
+	float: left;
+	border-bottom: 0px;
+	margin-bottom: 20px;
+}
+
+.button-headline {
+	width: 20%;
+	float: right;
+	font-size: 12px;
+	margin-top: 10px;
+	padding: 0px;
+
+	a {
+		padding: 15px 0px;
+		display: block;
+		text-decoration: none;
+		color: $gray-dark;
+	}
+
+	@media screen and (max-width: 768px) {
+			display: none;
+		}
+}
+
+.button-headline.active {
+	background: $gray-dark;
+
+	a {
+		color: white;
+	}
+}

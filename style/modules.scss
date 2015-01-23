@@ -11,6 +11,9 @@ Main Content Area
 }
 
 
+.entry-header {
+	position: relative;
+}
 
 
 .site-footer {
@@ -234,7 +237,7 @@ Main Header
 		}
 
 		#search-options-link {
-			color: $gray;
+			color: white;
 			font-size: 14px;
 			text-decoration: none;
 			text-align: center;
@@ -378,6 +381,20 @@ Main Header
 		}
 
 
+.edited-main-header {
+	.main-header-stats h2 {
+		color: white;
+		font-weight: 600;
+	}
+}
+
+.edited-main-header a.button {
+	display: inline-block;
+	color: white;
+	margin-top: 50px;
+	font-size: 19px;
+	border: 1px solid darken($orange, 25%);
+}
 
 
 /*--------------------------------------------------------------
@@ -1192,6 +1209,15 @@ Archive and Sidebar Search
 	border: 1px
 }
 
+.page-content #s {
+	border: 1px solid $gray;
+	margin-top: 25px;
+}
+
+.page-content #searchsubmit {
+	border: 1px solid darken($gray, 15%);
+	margin-top: 25px;
+}
 
 
 
@@ -1309,4 +1335,42 @@ Find A Church Search
 	border: #ccc solid 1px;
 	position: absolute;
 	bottom: 0px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+Search Results Page
+--------------------------------------------------------------*/
+
+.search-item {
+	margin-bottom: 20px;
+}
+
+.search-item h3 {
+	margin-bottom: 0px;
+
+	a {
+		text-decoration: none;
+		color: $gray-dark;
+		margin-bottom: 5px;
+
+		&:hover {
+			color: $green;
+		}
+	}
+}
+
+.search-item .entry-summary {
+	margin: 0px;
+}
+
+.search-item p {
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
+.search-item .post_type {
+	color: darken($gray, 20%);
 }

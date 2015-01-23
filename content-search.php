@@ -8,22 +8,26 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="search-item">
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php arizona_district_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+		<p><a href="<?php the_permalink(); ?>">
+		<?php $permalink = get_permalink(); echo str_replace("http://","",$permalink);?>
+		</a>
+		<span class="post_type"> : <?php $cpt = get_post_type( get_the_ID() );
+			$obj = get_post_type_object( $cpt );
+			echo $obj->labels->singular_name;?>
+		</span></p>
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
-		<?php arizona_district_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

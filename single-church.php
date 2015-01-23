@@ -18,9 +18,27 @@
 			<main id="main" class="single-church-main site-main col-9-12" role="main">
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<h1><?php the_field('church_name');?><span class="by-line"><?php the_field('church_city');?>, AZ</span></h1>
+				<header class="entry-header header-with-button wrapper">
 
-					<div class="">
+					<span class="button button-headline"><a href="#hidden-form">Suggest an Edit</a></span>
+
+					<h1><?php the_field('church_name');?><span class="by-line"><?php the_field('church_city');?>, AZ</span></h1>
+				</header>
+
+					<div class="hidden-form" id="hidden-form">
+						<?php
+						$churchname = get_field('church_name');
+						$churchcity = get_field('church_city');
+						$church = '' . $churchname . ', ' . $churchcity . ', AZ';
+
+						$field_values = $array = array(
+						    "church" => $church,
+						);?>
+						<?php gravity_form(3, $display_title=true, $display_description=true, $display_inactive=false, $field_values, $ajax=true, $tabindex); ?>
+						<hr>
+					</div>
+
+					<div class="entry-content">
 						<p><span class="church-label">Pastor:</span> <?php the_field('pastors_name');?></p>
 						<p><span class="church-label">Phone:</span> <?php the_field('phone');?></p>
 						<p><span class="church-label">Email:</span> <?php the_field('email');?></p>
@@ -32,6 +50,10 @@
 						<?php if( get_field('mailing_address') ) { ?>
 							<p><span class="church-label">Mailing Address:</span><br />
 							<?php the_field('mailing_address');?></p>
+						<?php } ?>
+						<?php if( get_field('website') ) { ?>
+							<hr>
+							<p><a href="<?php the_field('website'); ?>" class="button button-full">Church Website</a></p>
 						<?php } ?>
 					</div>
 

@@ -1,0 +1,48 @@
+.gform_wrapper form .top_label .gfield_label {
+	font-weight: 400;
+	margin: 15px 0px 0px 0px;
+	font-size: 15px;
+
+	.gfield_required {
+		color: $green;
+	}
+}
+
+.gform_wrapper form .ginput_container input {
+	padding: 15px;
+	font-size: 15px;
+}
+
+.gform_wrapper form .ginput_container textarea {
+	padding: 15px;
+	font-size: 15px;
+}
+
+.gform_wrapper form .ginput_container select {
+	padding: 15px;
+	font-size: 15px;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+}
+
+.gform_confirmation_message {
+	background: $green;
+	border: 1px solid darken($green, 10%);
+	color: white;
+	padding: 15px 25px;
+	font-weight: 300;
+	font-size: 15px;
+	margin-bottom: 25px;
+}
+
+
+
+.hidden-form {
+	display: none;
+	margin-top: 25px;
+}
+
+.fade-opacity {
+	opacity: .2;
+}

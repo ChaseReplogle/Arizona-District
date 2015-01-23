@@ -26,19 +26,24 @@ get_header(); ?>
 
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
-							<?php
-							$full_title = get_field('full_title');
+						<header class="entry-header header-with-button wrapper">
+							<span class="button button-headline"><a href="#hidden-form">Submit A Position</a></span>
+
+							<?php $full_title = get_field('full_title');
 								if($full_title!=''){
-									echo "<h1>".$full_title."</h1>";
+									echo "<h1>".$full_title." </h1>";
 								} else {
 									the_title( '<h1 class="entry-title">', '</h1>' );
 								}
 							?>
 						</header><!-- .entry-header -->
 
-						<div class="entry-content">
+						<div class="hidden-form" id="hidden-form">
+							<?php gravity_form(2, $display_title=true, $display_description=true, $display_inactive=false, $field_values=null, $ajax=true, $tabindex); ?>
+							<hr>
+						</div>
 
+						<div class="entry-content">
 
 						   	<div class="notification notification-green">
 								<p>This listing was last updated:

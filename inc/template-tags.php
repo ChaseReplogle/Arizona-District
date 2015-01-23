@@ -433,7 +433,7 @@ function arizona_district_instagram_bar() { ?>
 
 <!-- SnapWidget -->
 <script src="http://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="http://snapwidget.com/in/?u=bW5hb2d8aW58MTI1fDZ8MXx8bm98MHxub25lfG9uU3RhcnR8bm98eWVz&ve=301214" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
+<iframe src="http://snapwidget.com/in/?u=YXpfYWd8aW58MzAwfDZ8MXx8bm98MHxub25lfG9uU3RhcnR8bm98eWVz&ve=230115" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
 
 </div><!-- .instagram-bar -->
 
@@ -502,41 +502,6 @@ endif;
 
 
 
-/**
- * Creates the main homepage header
- *
- */
-if ( ! function_exists( 'arizona_district_home_header' ) ) :
-
-function arizona_district_home_header() { ?>
-
-
-<div class="main-header">
-		<div class="main-header-stats wrapper">
-			<p class="support-text">a network of</p>
-			<ul>
-				<li><h2><span class="timer"><?php the_field('number_of_churches', 'option'); ?></span> Churches</h2></li>
-				<li><h2><span class="timer"><?php the_field('number_of_members', 'option'); ?></span> Members</h2></li>
-				<li><h2><span class="timer"><?php the_field('number_of_ministers', 'option'); ?></span> Ministers</h2></li>
-			</ul>
-			<p class="support-text">building Christ’s kingdom in Arizona.</p>
-			<a href="#">Discover Open Ministry Positions</a>
-		</div>
-
-
-		<div class="main-header-search wrapper">
-			<?php get_search_form(); ?>
-		</div>
-	</div> <!-- .main-header -->
-
-<?php }
-
-endif;
-
-
-
-
-
 
 /**
  * Creates sidebar navigation for inner pages
@@ -596,6 +561,8 @@ function arizona_district_page_header() { ?>
                 echo 'Churches By Alphabet';
               } elseif ( is_singular('church') ) {
                 echo 'Churches';
+              } elseif ( is_search('') ) {
+                echo 'Search';
               } else {
 		page_ancestor(); } ?></h2>
 		<?php the_breadcrumb(); ?>
@@ -776,5 +743,29 @@ $children = wp_list_pages('title_li=&depth=1&echo=0&parent=11');
 ?> </ul> <?php
 
 }
+
+endif;
+
+
+
+
+/**
+ * Create Sidebar for contact page
+ *
+ */
+if ( ! function_exists( 'arizona_district_contact_sidebar' ) ) :
+
+function arizona_district_contact_sidebar() {
+
+?>
+<p>Contact Information</p>
+<p class="support-text">
+<?php the_field('street_address', 'option'); ?><br />
+<?php the_field('suite', 'option'); ?><br />
+<?php the_field('city,_state,_zip', 'option'); ?></p>
+<p class="support-text">Phone: <?php the_field('phone_number', 'option'); ?></p>
+<p class="support-text">Fax: <?php the_field('fax_number', 'option'); ?></p>
+
+<?php }
 
 endif;

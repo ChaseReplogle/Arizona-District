@@ -1,0 +1,40 @@
+header, nav, section, article, aside, footer, hgroup {
+   display: block;
+}
+
+.site-footer-nav {
+	background-color: black;
+}
+
+#menu-support-menu li {
+	float: left;
+	display: block;
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+#menu-support-menu li a {
+	text-decoration: none;
+	color: #dadada;
+	font-size: 12px;
+	text-align: right;
+}
+
+nav#header__menu ul.menu li.menu-item {
+	float: left;
+	display: block;
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+nav#header__menu ul.menu-main-site-menu li.menu-item a {
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+	text-align: right;
+}
+
+.main-header .main-header-stats h2 {
+	text-align: center;
+	width: 100%;
+}

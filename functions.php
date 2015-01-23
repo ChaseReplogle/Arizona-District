@@ -137,6 +137,12 @@ add_action( 'wp_enqueue_scripts', 'arizona_district_scripts' );
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Custom template tags for theme homepage header.
+ */
+require get_template_directory() . '/inc/template-tags-home-header.php';
+
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';

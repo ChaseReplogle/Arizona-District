@@ -1,7 +1,5 @@
 
 
-
-
 (function($) {
 
 /*
@@ -268,3 +266,20 @@ if(currentCalendarPage !== '') {
 }
 
 
+
+/**
+ * Handles slide down on hidden forms with button in the page header.
+ *
+ */
+$(".button-headline a").click(function(event){
+   event.preventDefault();
+  $('#hidden-form').slideToggle();
+  $(this).parent().toggleClass('active');
+  $('.entry-content').toggleClass('fade-opacity');
+});
+
+
+$(".gform_button").click(function(event){
+  $('.button-headline a').parent().removeClass('active');
+  $('.entry-content').removeClass('fade-opacity');
+});

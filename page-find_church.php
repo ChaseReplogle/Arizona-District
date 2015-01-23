@@ -99,7 +99,7 @@ get_header(); ?>
 
 					<div id="search" class="tab-content">
 						<div class="sidebar-searchform church-searchform">
-							<?php get_template_part( 'searchform', 'sidebar' );  ?>
+							<?php get_template_part( 'searchform', 'churches' );  ?>
 						</div>
 					</div>
 
