@@ -67,9 +67,7 @@ Template Name: Home
 				<?php while ( $home_tabs->have_posts() ) {
 					$home_tabs->the_post(); ?>
 					<?php $background = get_field('background_image');  $size = 'large'; $background = $background['sizes'][ $size ];?>
-				        <div id="tab-<?php echo $post->ID;?>" class="tab-content" style="background: url('<?php echo $background; ?>') no-repeat top center;-webkit-background-size: cover;
-								-moz-background-size: cover; -o-background-size: cover; background-size: cover;
-								filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale')"; ">
+				        <div id="tab-<?php echo $post->ID;?>" class="tab-content" style="background: url('<?php echo $background; ?>') no-repeat top center;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale')"">
 				        	<div class="gradient">
 				        		<div class="wrapper">
 					        		<div class="tab-content-text">

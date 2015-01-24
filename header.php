@@ -31,6 +31,7 @@ document.createElement('article');
 document.createElement('aside');
 document.createElement('footer');
 document.createElement('hgroup');
+document.createElement('main');
 </script>
 <![endif]-->
 </head>

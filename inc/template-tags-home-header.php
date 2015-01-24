@@ -26,10 +26,7 @@ if ( $home_header->have_posts() ) {
 
 		<?php $background = get_field('background_image');  $size = 'large'; $background = $background['sizes'][ $size ];?>
 
-		<div class="main-header edited-main-header"
-		style="background: url('<?php echo $background; ?>') no-repeat top center;-webkit-background-size: cover;
-					-moz-background-size: cover; -o-background-size: cover; background-size: cover;
-					filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale')"; ">
+		<div class="main-header edited-main-header" style="background: url('<?php echo $background; ?>') no-repeat top center;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='<?php echo $background; ?>', sizingMethod='scale')"">
 			<div class="main-header-stats wrapper">
 				<p class="support-text"><?php the_field('top_line');?></p>
 				<ul>
