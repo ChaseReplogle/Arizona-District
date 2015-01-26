@@ -483,6 +483,8 @@ Main Header
 
 .main-header-additional a { text-align: center; display: block; width: 100%; font-size: 14px; color: white; font-weight: 200; }
 
+.edited-main-header .main-header-stats h2 { color: white; }
+
 .edited-main-header a.button { display: inline-block; color: white; margin-top: 50px; font-size: 19px; border: 1px solid #663612; }
 
 /*--------------------------------------------------------------
