@@ -59,7 +59,10 @@
 
 					<?php if( !empty($location) ): ?>
 						<div class="acf-map">
-							<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+							<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+								<h4><?php the_field('church_city'); ?></h4>
+								<p class="address"><?php echo $location['address']; ?></p>
+							</div>
 						</div>
 					<?php endif; ?>
 				<?php endwhile; // end of the loop. ?>

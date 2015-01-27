@@ -19,6 +19,14 @@ h1 {
 	margin-bottom: 40px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid $gray;
+
+	@media screen and (max-width: 500px) {
+		font-size: 30px;
+		line-height: 45px;
+		margin-bottom: 25px;
+		padding-bottom: 15px;
+	}
+
 }
 
 h2 {

@@ -8,6 +8,10 @@ Main Content Area
 	padding: 70px 5%;
 	border-left: 1px solid $gray;
 	margin: 0px;
+
+	@media screen and (max-width: 500px) {
+		padding: 30px 5%;
+	}
 }
 
 

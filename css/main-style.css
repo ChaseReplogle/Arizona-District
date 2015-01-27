@@ -109,6 +109,7 @@ body, input, button { font-family: "open-sans",sans-serif; font-size: 19px; }
 a { color: #288c84; }
 
 h1 { font-family: "open-sans",sans-serif; line-height: 60px; font-size: 50px; text-align: left; font-weight: 600; color: #4a4a4a; text-transform: uppercase; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #dfdfdf; }
+@media screen and (max-width: 500px) { h1 { font-size: 30px; line-height: 45px; margin-bottom: 25px; padding-bottom: 15px; } }
 
 h2 { font-family: "open-sans",sans-serif; line-height: 45px; font-size: 30px; font-weight: 700; margin-bottom: 15px; margin-top: 30px; text-transform: uppercase; }
 
@@ -285,9 +286,11 @@ Page with Sidebar Navigation
 Inner Page Header and Breadcrumb Navigation
 --------------------------------------------------------------*/
 .page-inner-header { background: white; padding: 50px 0px; border-bottom: 1px solid #dfdfdf; position: relative; overflow: hidden; }
+@media screen and (max-width: 500px) { .page-inner-header { padding: 20px 0px; } }
 
 .page-inner-header h2 { color: white; font-weight: 200; font-size: 40px; margin-bottom: 10px; position: relative; z-index: 10; text-transform: inherit; margin-top: 0px; }
 @media screen and (max-width: 1140px) { .page-inner-header h2 { padding-left: 30px; } }
+@media screen and (max-width: 500px) { .page-inner-header h2 { font-size: 25px; line-height: 35px; } }
 
 #crumbs { z-index: 10; position: relative; padding: 0px; line-height: 18px; font-size: 13px; color: #ABD2BD; padding: 0px 2px; font-weight: 200; text-decoration: none; }
 @media screen and (max-width: 1140px) { #crumbs { padding-left: 30px; padding-right: 30px; } }
@@ -384,6 +387,7 @@ ol.wp-paginate .page.current { background-color: #4a4a4a; border: 1px solid #a75
 Main Content Area
 --------------------------------------------------------------*/
 .page-with-sidebar .site-main { background: #fff; padding: 70px 5%; border-left: 1px solid #dfdfdf; margin: 0px; }
+@media screen and (max-width: 500px) { .page-with-sidebar .site-main { padding: 30px 5%; } }
 
 .entry-header { position: relative; }
 

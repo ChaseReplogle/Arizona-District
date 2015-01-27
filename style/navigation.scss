@@ -418,6 +418,11 @@ Inner Page Header and Breadcrumb Navigation
 	border-bottom: 1px solid $gray;
 	position: relative;
 	overflow: hidden;
+
+	@media screen and (max-width: 500px) {
+		padding: 20px 0px;
+	}
+
 }
 
 	.page-inner-header h2 {
@@ -432,6 +437,11 @@ Inner Page Header and Breadcrumb Navigation
 
 		@media screen and (max-width: 1140px) {
 			padding-left: 30px;
+		}
+
+		@media screen and (max-width: 500px) {
+			font-size: 25px;
+			line-height: 35px;
 		}
 	}
 
