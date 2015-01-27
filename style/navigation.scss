@@ -442,6 +442,7 @@ Inner Page Header and Breadcrumb Navigation
 		@media screen and (max-width: 500px) {
 			font-size: 25px;
 			line-height: 35px;
+			margin-bottom: 0px;
 		}
 	}
 
@@ -494,15 +495,18 @@ Inner Page Header and Breadcrumb Navigation
 		height: 100%;
 		top: 0px;
 		background: rgba(40,140,132,1);
-background: rgba(40,140,132,1);
-background: -moz-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(40,140,132,1)), color-stop(57%, rgba(111,167,120,1)), color-stop(100%, rgba(191,212,159,1)));
-background: -webkit-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
-background: -o-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
-background: -ms-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
-background: linear-gradient(to right, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 );		z-index: 5;
+		background: -moz-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+		background: -webkit-gradient(left top, right top, color-stop(0%, rgba(40,140,132,1)), color-stop(57%, rgba(111,167,120,1)), color-stop(100%, rgba(191,212,159,1)));
+		background: -webkit-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+		background: -o-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+		background: -ms-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+		background: linear-gradient(to right, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 );		z-index: 5;
 		opacity: .85;
+
+		@media screen and (max-width: 500px) {
+
+		}
 	}
 
 

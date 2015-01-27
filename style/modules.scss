@@ -132,7 +132,7 @@ Main Header
 --------------------------------------------------------------*/
 
 .main-header {
-	background: url('../images/header.jpg') no-repeat center center;
+	background: url('../images/header.jpg') no-repeat left center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -190,7 +190,7 @@ Main Header
 
 			@media screen and (max-width: 450px) {
 				font-size: 40px;
-				line-height: 50px;
+				line-height: 45px;
 			}
 		}
 
@@ -200,6 +200,10 @@ Main Header
 			font-size: 14px;
 			margin-top: 30px;
 			display: block;
+
+			@media screen and (max-width: 450px) {
+				display: none;
+			}
 		}
 
 
@@ -337,6 +341,7 @@ Main Header
 				border-radius: 0px;
 				padding: 20px 10% 20px 10%;
 				text-align: center;
+				margin-bottom: 10px;
 
 			}
 		}

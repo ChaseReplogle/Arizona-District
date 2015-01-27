@@ -290,7 +290,7 @@ Inner Page Header and Breadcrumb Navigation
 
 .page-inner-header h2 { color: white; font-weight: 200; font-size: 40px; margin-bottom: 10px; position: relative; z-index: 10; text-transform: inherit; margin-top: 0px; }
 @media screen and (max-width: 1140px) { .page-inner-header h2 { padding-left: 30px; } }
-@media screen and (max-width: 500px) { .page-inner-header h2 { font-size: 25px; line-height: 35px; } }
+@media screen and (max-width: 500px) { .page-inner-header h2 { font-size: 25px; line-height: 35px; margin-bottom: 0px; } }
 
 #crumbs { z-index: 10; position: relative; padding: 0px; line-height: 18px; font-size: 13px; color: #ABD2BD; padding: 0px 2px; font-weight: 200; text-decoration: none; }
 @media screen and (max-width: 1140px) { #crumbs { padding-left: 30px; padding-right: 30px; } }
@@ -305,7 +305,7 @@ Inner Page Header and Breadcrumb Navigation
 
 #crumbs a:hover { text-decoration: underline; opacity: 1; }
 
-.page-inner-header .gradient { position: absolute; width: 100%; height: 100%; top: 0px; background: #288c84; background: #288c84; background: -moz-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -webkit-gradient(left top, right top, color-stop(0%, #288c84), color-stop(57%, #6fa778), color-stop(100%, #bfd49f)); background: -webkit-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -o-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -ms-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: linear-gradient(to right, #288c84 0%, #6fa778 57%, #bfd49f 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 ); z-index: 5; opacity: .85; }
+.page-inner-header .gradient { position: absolute; width: 100%; height: 100%; top: 0px; background: #288c84; background: -moz-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -webkit-gradient(left top, right top, color-stop(0%, #288c84), color-stop(57%, #6fa778), color-stop(100%, #bfd49f)); background: -webkit-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -o-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: -ms-linear-gradient(left, #288c84 0%, #6fa778 57%, #bfd49f 100%); background: linear-gradient(to right, #288c84 0%, #6fa778 57%, #bfd49f 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 ); z-index: 5; opacity: .85; }
 
 .page-template-page-navigation .child-page-navigational { background: #fafafa; border: 1px solid #ececec; padding: 30px 5%; margin-bottom: 20px; }
 .page-template-page-navigation .child-page-navigational h4 { margin: 0px 0px 15px 0px; }
@@ -428,7 +428,7 @@ Search Form
 /*--------------------------------------------------------------
 Main Header
 --------------------------------------------------------------*/
-.main-header { background: url("../images/header.jpg") no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; display: block; padding: 0px; height: auto; }
+.main-header { background: url("../images/header.jpg") no-repeat left center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; display: block; padding: 0px; height: auto; }
 
 .main-header-stats { text-align: center; padding: 120px 20px 60px 20px; }
 @media screen and (max-width: 650px) { .main-header-stats { padding: 80px 20px 40px 20px; } }
@@ -443,9 +443,10 @@ Main Header
 
 .main-header-stats h2 { font-size: 100px; line-height: 120px; font-weight: 400; color: #FEFFD6; }
 @media screen and (max-width: 650px) { .main-header-stats h2 { font-size: 70px; line-height: 80px; } }
-@media screen and (max-width: 450px) { .main-header-stats h2 { font-size: 40px; line-height: 50px; } }
+@media screen and (max-width: 450px) { .main-header-stats h2 { font-size: 40px; line-height: 45px; } }
 
 .main-header-stats a { color: #FFD0A3; font-weight: 200; font-size: 14px; margin-top: 30px; display: block; }
+@media screen and (max-width: 450px) { .main-header-stats a { display: none; } }
 
 .main-header-search { padding: 0px 10% 200px 10%; overflow: visible; }
 @media screen and (max-width: 650px) { .main-header-search { padding: 0px 10% 100px 10%; } }
@@ -477,7 +478,7 @@ Main Header
 
 #s { width: 72%; font-size: 16px; font-weight: 200; padding: 21px 2% 21px 5%; -webkit-border-radius: 50px 0 0 50px; border-radius: 50px 0 0 50px; margin: 0px; border: 0px; }
 #s:focus { outline: 0; }
-@media screen and (max-width: 450px) { #s { width: 80%; -webkit-border-radius: 0px; border-radius: 0px; padding: 20px 10% 20px 10%; text-align: center; } }
+@media screen and (max-width: 450px) { #s { width: 80%; -webkit-border-radius: 0px; border-radius: 0px; padding: 20px 10% 20px 10%; text-align: center; margin-bottom: 10px; } }
 
 #searchsubmit { background: #dfdfdf; -webkit-border-radius: 0 50px 50px 0; border-radius: 0 50px 50px 0; font-size: 16px; border: 0px; outline: 0; padding: 21px 5%; width: 20%; margin: 0px; color: #4a4a4a; font-weight: 200; cursor: pointer; margin-left: -1px; }
 #searchsubmit:hover { background: #288c84; color: white; }
