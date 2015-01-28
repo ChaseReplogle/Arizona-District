@@ -478,11 +478,11 @@ Main Header
 
 #s { width: 72%; font-size: 16px; font-weight: 200; padding: 21px 2% 21px 5%; -webkit-border-radius: 50px 0 0 50px; border-radius: 50px 0 0 50px; margin: 0px; border: 0px; }
 #s:focus { outline: 0; }
-@media screen and (max-width: 450px) { #s { width: 80%; -webkit-border-radius: 0px; border-radius: 0px; padding: 20px 10% 20px 10%; text-align: center; margin-bottom: 10px; } }
+@media screen and (max-width: 450px) { #s { width: 80%; -webkit-border-radius: 0px; border-radius: 0px; padding: 20px 10% 20px 10%; text-align: center; margin-bottom: 0px; -webkit-appearance: none; -webkit-border-radius: 0; border-radius: 0px; } }
 
 #searchsubmit { background: #dfdfdf; -webkit-border-radius: 0 50px 50px 0; border-radius: 0 50px 50px 0; font-size: 16px; border: 0px; outline: 0; padding: 21px 5%; width: 20%; margin: 0px; color: #4a4a4a; font-weight: 200; cursor: pointer; margin-left: -1px; }
 #searchsubmit:hover { background: #288c84; color: white; }
-@media screen and (max-width: 450px) { #searchsubmit { width: 100%; -webkit-border-radius: 0px; border-radius: 0px; padding: 15px 0%; margin-top: 0px; } }
+@media screen and (max-width: 450px) { #searchsubmit { width: 100%; -webkit-border-radius: 0px; border-radius: 0px; padding: 15px 0%; margin-top: 0px; background: #288c84; color: white; } }
 
 .main-header-additional { margin-top: 30px; }
 
