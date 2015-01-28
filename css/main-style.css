@@ -482,7 +482,7 @@ Main Header
 
 #searchsubmit { background: #dfdfdf; -webkit-border-radius: 0 50px 50px 0; border-radius: 0 50px 50px 0; font-size: 16px; border: 0px; outline: 0; padding: 21px 5%; width: 20%; margin: 0px; color: #4a4a4a; font-weight: 200; cursor: pointer; margin-left: -1px; }
 #searchsubmit:hover { background: #288c84; color: white; }
-@media screen and (max-width: 450px) { #searchsubmit { width: 100.5%; -webkit-border-radius: 0px; border-radius: 0px; padding: 20px 0%; margin-top: 0px; background: #d27026; color: white; border: 1px solid #7c4216; } }
+@media screen and (max-width: 450px) { #searchsubmit { width: 100.5%; -webkit-border-radius: 0px; border-radius: 0px; padding: 16px 0%; margin-top: 0px; background: #d27026; color: white; border: 1px solid #7c4216; } }
 
 .main-header-additional { margin-top: 30px; }
 
