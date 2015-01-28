@@ -104,7 +104,7 @@ body { margin: 0px; }
   .mobile-col-5-12 { width: 41.66%; }
   .mobile-col-7-12 { width: 58.33%; }
   .hide-on-mobile { display: none !important; width: 0; height: 0; } }
-body, input, button { font-family: "open-sans",sans-serif; font-size: 19px; }
+body, input, button { font-family: "open-sans",sans-serif; font-size: 19px; -webkit-appearance: none; }
 
 a { color: #288c84; }
 
@@ -432,7 +432,7 @@ Main Header
 
 .main-header-stats { text-align: center; padding: 120px 20px 60px 20px; }
 @media screen and (max-width: 650px) { .main-header-stats { padding: 80px 20px 40px 20px; } }
-@media screen and (max-width: 450px) { .main-header-stats { padding: 50px 20px 00px 20px; } }
+@media screen and (max-width: 450px) { .main-header-stats { padding: 50px 20px 20px 20px; } }
 
 .main-header-stats ul li { display: none; }
 
@@ -443,7 +443,7 @@ Main Header
 
 .main-header-stats h2 { font-size: 100px; line-height: 120px; font-weight: 400; color: #FEFFD6; }
 @media screen and (max-width: 650px) { .main-header-stats h2 { font-size: 70px; line-height: 80px; } }
-@media screen and (max-width: 450px) { .main-header-stats h2 { font-size: 40px; line-height: 45px; } }
+@media screen and (max-width: 450px) { .main-header-stats h2 { font-size: 40px; line-height: 40px; margin-top: 15px; } }
 
 .main-header-stats a { color: #FFD0A3; font-weight: 200; font-size: 14px; margin-top: 30px; display: block; }
 @media screen and (max-width: 450px) { .main-header-stats a { display: none; } }
@@ -467,7 +467,7 @@ Main Header
 #search-options-link.selected:after { content: "▼"; padding: 0px 0px 0px 10px; font-size: 10px; color: #dadada; }
 
 .main-header-search .search-options { background: #f7f7f7; top: 20px; left: 25%; padding: 0px 0px; border: 1px solid #dfdfdf; border-bottom: 0px; -webkit-box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.6); box-shadow: 0 0 85px 0 rgba(0, 0, 0, 0.6); width: 50%; z-index: 99; margin: 0 auto; }
-@media screen and (max-width: 900px) { .main-header-search .search-options { width: 100%; } }
+@media screen and (max-width: 900px) { .main-header-search .search-options { width: 100%; left: 0px; } }
 
 .search-options .wrapper { overflow: visible; }
 
