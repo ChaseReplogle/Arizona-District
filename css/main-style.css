@@ -104,7 +104,7 @@ body { margin: 0px; }
   .mobile-col-5-12 { width: 41.66%; }
   .mobile-col-7-12 { width: 58.33%; }
   .hide-on-mobile { display: none !important; width: 0; height: 0; } }
-body, input, button { font-family: "open-sans",sans-serif; font-size: 19px; -webkit-appearance: none; }
+body, input, button { font-family: "open-sans",sans-serif; font-size: 19px; -webkit-appearance: none; -webkit-border-radius: 0; border-radius: 0px; }
 
 a { color: #288c84; }
 

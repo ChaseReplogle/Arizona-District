@@ -1,7 +1,9 @@
 body, input, button {
 	font-family:"open-sans",sans-serif;
 	font-size: 19px;
-	 -webkit-appearance: none;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	border-radius: 0px;
 }
 
 a {
