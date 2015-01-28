@@ -450,7 +450,7 @@ Main Header
 
 .main-header-search { padding: 0px 10% 200px 10%; overflow: visible; }
 @media screen and (max-width: 650px) { .main-header-search { padding: 0px 10% 100px 10%; } }
-@media screen and (max-width: 650px) { .main-header-search { padding: 0px 10% 50px 10%; } }
+@media screen and (max-width: 650px) { .main-header-search { padding: 0px 5% 60px 5%; } }
 
 #searchOptions { position: relative; overflow: visible; }
 @media screen and (max-width: 900px) { #searchOptions { width: 100%; text-align: center; padding: 0px 0px 10px 0px; } }
@@ -482,7 +482,7 @@ Main Header
 
 #searchsubmit { background: #dfdfdf; -webkit-border-radius: 0 50px 50px 0; border-radius: 0 50px 50px 0; font-size: 16px; border: 0px; outline: 0; padding: 21px 5%; width: 20%; margin: 0px; color: #4a4a4a; font-weight: 200; cursor: pointer; margin-left: -1px; }
 #searchsubmit:hover { background: #288c84; color: white; }
-@media screen and (max-width: 450px) { #searchsubmit { width: 100%; -webkit-border-radius: 0px; border-radius: 0px; padding: 15px 0%; margin-top: 0px; background: #288c84; color: white; } }
+@media screen and (max-width: 450px) { #searchsubmit { width: 100.5%; -webkit-border-radius: 0px; border-radius: 0px; padding: 20px 0%; margin-top: 0px; background: #d27026; color: white; border: 1px solid #7c4216; } }
 
 .main-header-additional { margin-top: 30px; }
 
