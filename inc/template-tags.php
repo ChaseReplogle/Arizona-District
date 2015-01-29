@@ -668,7 +668,9 @@ function arizona_district_leadership() { ?>
 		<h5><?php the_field("leadership_title"); ?></h5>
 		<p class="support-text"><?php the_field("leadership_phone"); ?></p>
 		<p class="support-text"><?php the_field("leadership_email"); ?></p>
+		<?php if( '' !== get_post()->post_content ) { ?>
 		<p class="support-text"><a href="<?php the_permalink(); ?>">View Profile</a></p>
+		<?php } ?>
 	</div>
 	<div class="social-links col-3-12">
 		<?php if( get_field('leadership_facebook') ) { ?><p class="support-text"><a href="<?php the_field('leadership_facebook'); ?>">Facebook</a></p><?php } ?>

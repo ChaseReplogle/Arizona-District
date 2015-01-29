@@ -1,19 +1,5 @@
 [
     {
-        "text": "Document",
-        "value": "documents",
-        "content": false,
-        "description": true,
-        "description_text": "Paste in the URL to the document you would like to link to. If you haven't already, use the Document tab to the left to create your document.",
-        "options": [
-            {
-                "type": "textbox",
-                "name": "href",
-                "label": "URL"
-            }
-        ]
-    },
-    {
         "text": "Intro Paragraph",
         "value": "intro_paragraph",
         "content": true,
@@ -79,6 +65,20 @@
                         "value": "orange"
                     }
                 ]
+            }
+        ]
+    },
+    {
+        "text": "Document",
+        "value": "document",
+        "content": false,
+        "description": true,
+        "description_text": "Paste in the URL to the document you would like to link to. If you haven't already, use the Document tab to the left to create your document.",
+        "options": [
+            {
+                "type": "textbox",
+                "name": "href",
+                "label": "URL"
             }
         ]
     }

@@ -13,13 +13,15 @@ function document($atts) {
    extract(shortcode_atts(array(
       'url' => "",
    ), $atts));
-
-  $postid = url_to_postid( $url );
+  $url = basename($atts[href]);
+  $document = get_page_by_path( $url, OBJECT, 'documents' );
+  $documentID = $document->ID;
   ob_start(); ?>
 
 <?php $args=array(
-    'p' => $postid,
-    'post_type' => documents,
+    'p' => $documentID,
+    'post_type' => 'documents',
+    'posts_per_page' => 1
   );
 
 $the_query = new WP_Query( $args ); ?>
@@ -37,9 +39,9 @@ $the_query = new WP_Query( $args ); ?>
           </a>
         </div>
       <div class="document_text">
-          <a href='<?php the_field("document_file"); ?>' class="title"><?php the_title(); ?> <span>(<?php the_field("document_type"); ?>)</span></a>
+          <a href='<?php the_field("document_file"); ?>' class="title" target="_Blank"><?php the_title(); ?> <span>(<?php the_field("document_type"); ?>)</span></a>
           <p><?php echo $excerpt; ?>...</p>
-          <a href="<?php the_field('document_file'); ?>">Download</a>
+          <a href="<?php the_field('document_file'); ?>" target="_Blank">Download</a>
         </div>
      </div>
   <?php endwhile;

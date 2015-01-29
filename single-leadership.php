@@ -31,7 +31,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<h1><?php the_title(); ?></h1>
-
+					<h3><?php the_field("leadership_title"); ?></h3>
 					<?php the_content(); ?>
 
 					<div class="leadership-item leadership-item-module wrapper">

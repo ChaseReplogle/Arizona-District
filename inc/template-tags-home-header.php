@@ -55,7 +55,7 @@ if ( $home_header->have_posts() ) {
 					<li><h2><span class="timer"><?php the_field('number_of_members', 'option'); ?></span> Members</h2></li>
 					<li><h2><span class="timer"><?php the_field('number_of_ministers', 'option'); ?></span> Ministers</h2></li>
 				</ul>
-				<p class="support-text">building Christ’s kingdom in Arizona.</p>
+				<p class="support-text">advancing the Kingdom of God in Arizona.</p>
 				<a href="/churches/open-positions">Find Open Ministry Positions</a>
 			</div>
 
