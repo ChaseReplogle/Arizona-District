@@ -34,17 +34,14 @@ get_header(); ?>
 
 					<div id="city" class="tab-content">
 						<?php $taxonomy = 'city_glossary';
-						if ( false === ( $alphabet = get_transient( 'arizona_archive_alphabet' ) ) ) {
-						    // It wasn't there, so regenerate the data and save the transient
-						    $terms = get_terms($taxonomy);
+							 $terms = get_terms($taxonomy);
 						    $alphabet = array();
 						    if($terms){
 						        foreach ($terms as $term){
 						            $alphabet[] = $term->slug;
 						        }
 						    }
-						    set_transient( 'arizona_archive_alphabet', $alphabet );
-						} ?>
+						    ?>
 						<div id="city_archive-menu" class="menu wrapper" >
 							<p class="support-text">Cities (Alphabetical)</p>
 						    <ul id="city-menu">
@@ -67,16 +64,14 @@ get_header(); ?>
 
 					<div id="name" class="tab-content">
 						<?php $taxonomy_name = 'name_glossary';
-						if ( false === ( $alphabet_name = get_transient( 'arizona_name_archive_alphabet' ) ) ) {
-						    // It wasn't there, so regenerate the data and save the transient
+
 						    $terms_name = get_terms($taxonomy_name);
 						    $alphabet_name = array();
 						    if($terms_name){
 						        foreach ($terms_name as $term_name){
 						            $alphabet_name[] = $term_name->slug;
 						        }
-						    }
-						    set_transient( 'arizona_name_archive_alphabet', $alphabet_name );
+
 						} ?>
 						<div id="name_archive-menu" class="menu wrapper">
 							<p class="support-text">Church Name (Alphabetical)</p>

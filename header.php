@@ -13,6 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style/ie8.css" media="screen" type="text/css" />
 <![endif]-->

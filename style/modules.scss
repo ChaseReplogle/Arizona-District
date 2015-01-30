@@ -585,6 +585,66 @@ Instagram Bar
 
 
 
+/*--------------------------------------------------------------
+Subscribe Bar
+--------------------------------------------------------------*/
+
+.subscribe-bar {
+	background: rgba(40,140,132,1);
+	background: -moz-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(40,140,132,1)), color-stop(57%, rgba(111,167,120,1)), color-stop(100%, rgba(191,212,159,1)));
+	background: -webkit-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+	background: -o-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+	background: -ms-linear-gradient(left, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+	background: linear-gradient(to right, rgba(40,140,132,1) 0%, rgba(111,167,120,1) 57%, rgba(191,212,159,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#288c84', endColorstr='#bfd49f', GradientType=1 );		z-index: 5;
+	opacity: .85;
+	padding: 40px 0px;
+}
+
+.subscribe-bar-box-wrapper {
+	@media screen and (max-width: 1100px) {
+		padding: 0px 20px;
+	}
+}
+
+.subscribe-bar p {
+	margin: 0px;
+}
+
+.subscribe-bar-content {
+
+	p {
+		color: white;
+		font-weight: 100;
+		padding-right: 1%;
+	}
+}
+
+.subscribe-bar-link {
+
+}
+
+.subscribe-bar-link a.button {
+	display: inline-block;
+	background: transparent;
+	color: white;
+	font-weight: 100;
+	font-size: 22px;
+	float: right;
+	border: 1px solid white;
+	width: 90%;
+	padding: 15px 0px;
+	margin: 0px;
+
+	@media screen and (max-width: 768px) {
+		margin-top: 20px;
+		width: 100%;
+	}
+}
+
+
+
 
 /*--------------------------------------------------------------
 Resource Bar
@@ -602,7 +662,7 @@ Resource Bar
 
 	.resource-bar-item {
 		width: 18.5%;
-		float: left;
+		float: right;
 		display: block;
 
 		@media screen and (max-width: 768px) {
@@ -681,9 +741,9 @@ Resource Bar
 
 	.resource-bar-text {
 		width: 25%;
-		float: right;
-		padding-left: 5%;
-		padding-top: 4%;
+		float: left;
+		padding-right: 4%;
+		padding-top: 3%;
 
 		@media screen and (max-width: 768px) {
 			display: none;
@@ -692,6 +752,8 @@ Resource Bar
 
 		.resource-bar-text h3 {
 			color: $white;
+			font-weight: 300;
+			font-size: 30px;
 		}
 
 		.resource-bar-text p {

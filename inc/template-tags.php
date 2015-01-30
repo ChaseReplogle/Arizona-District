@@ -444,6 +444,34 @@ endif;
 
 
 
+/**
+ * Adds an Email Sign Up Link to the Pgae
+ *
+ */
+if ( ! function_exists( 'arizona_district_subscribe_link' ) ) :
+
+function arizona_district_subscribe_link() { ?>
+
+
+<div class="subscribe-bar">
+	<div class="subscribe-bar-box">
+		<div class="subscribe-bar-box-wrapper wrapper">
+			<div class="subscribe-bar-content col-9-12">
+				<p><strong>Join our District Ministries email list.</strong> You will receive newsletters containing important information about events or inspirational words for our District Leadership team.</p>
+			</div>
+			<div class="subscribe-bar-link col-3-12">
+				<p><a href="#" targe="_Blank" class="button">Subscribe</a></p>
+			</div>
+		</div>
+	</div><!-- .subscribe-bar-bos -->
+</div><!-- .subscribe-bar -->
+
+<?php }
+
+endif;
+
+
+
 
 
 /**
@@ -463,6 +491,13 @@ function arizona_district_resources_bar() { ?>
 	$post_objects = get_field('selected_resources');
 
 		if( $post_objects ): ?>
+
+
+		<div class="resource-bar-text hide-on-mobile">
+			<h3>Resources</h3>
+			<p>Ministries and resources to help support your calling and your church.</p>
+			<a href="#">Discover More</a>
+		</div>
 
 		    <?php foreach( $post_objects as $post):  ?>
 		    	<?php if($i==4) break; ?>
@@ -485,12 +520,6 @@ function arizona_district_resources_bar() { ?>
 
 		    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 		<?php endif; ?>
-
-		<div class="resource-bar-text hide-on-mobile">
-			<h3>Resources</h3>
-			<p>Ministries and resources to help support your calling and your church.</p>
-			<a href="#">Discover More</a>
-		</div>
 	</div>
 </div> <!-- .resource-bar -->
 

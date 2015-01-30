@@ -53,14 +53,14 @@
 						<?php } ?>
 						<?php if( get_field('website') ) { ?>
 							<hr>
-							<p><a href="<?php the_field('website'); ?>" class="button button-full">Church Website</a></p>
+							<p><a href="http://<?php the_field('website'); ?>" class="button button-full" target="_Blank">Church Website</a></p>
 						<?php } ?>
 					</div>
 
 					<?php if( !empty($location) ): ?>
 						<div class="acf-map">
 							<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
-								<h4><?php the_field('church_city'); ?></h4>
+								<h4><?php the_field('church_name'); ?></h4>
 								<p class="address"><?php echo $location['address']; ?></p>
 							</div>
 						</div>

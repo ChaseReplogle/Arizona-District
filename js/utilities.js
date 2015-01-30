@@ -187,20 +187,19 @@ $("#searchOptions input[type='radio']").click(function () {
  *
  */
 
-var $reviews = $('.main-header-stats ul li');
-$reviews.eq(Math.random()*$reviews.length).addClass("show");
-$(".show").find(".timer").addClass("fixed_timer");
+  var $reviews = $('.main-header-stats ul li');
+  $reviews.eq(Math.random()*$reviews.length).addClass("show");
+  $(".show").find(".timer").addClass("fixed_timer");
 
-var finishTime = $(".fixed_timer").text();
-jQuery({someValue: 0}).animate({someValue: finishTime}, {
-	duration: 3000,
-	easing:'swing', // can be anything
-	step: function() { // called on every step
-		// Update the element's text with rounded-up value:
-		$('.fixed_timer').text(Math.ceil(this.someValue));
-	}
-});
-
+  var finishTime = $(".fixed_timer").text();
+  jQuery({someValue: 0}).animate({someValue: finishTime}, {
+  	duration: 3000,
+  	easing:'swing', // can be anything
+  	step: function() { // called on every step
+  		// Update the element's text with rounded-up value:
+  		$('.fixed_timer').text(Math.ceil(this.someValue));
+  	}
+  });
 
 
 

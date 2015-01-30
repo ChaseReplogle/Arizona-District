@@ -20,16 +20,12 @@
 					<h1>Cities begining with "<?php $term = $wp_query->queried_object; echo $term->name; ?>"</h1>
 
 					<?php $taxonomy = 'city_glossary';
-						if ( false === ( $alphabet = get_transient( 'arizona_archive_alphabet' ) ) ) {
-						    // It wasn't there, so regenerate the data and save the transient
-						    $terms = get_terms($taxonomy);
+						$terms = get_terms($taxonomy);
 						    $alphabet = array();
 						    if($terms){
 						        foreach ($terms as $term){
 						            $alphabet[] = $term->slug;
 						        }
-						    }
-						    set_transient( 'arizona_archive_alphabet', $alphabet );
 						} ?>
 						<div id="city_archive-menu" class="menu wrapper tax_nav" >
 							<p class="support-text">Cities (Alphabetical)</p>
