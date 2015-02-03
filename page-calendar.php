@@ -71,8 +71,14 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 
+
+
 <?php if( get_field('instagram_bar') ) { ?>
 	<?php arizona_district_instagram_bar(); ?>
+<?php } ?>
+
+<?php if( get_field('subscribe_bar') ) { ?>
+	<?php arizona_district_subscribe_link(); ?>
 <?php } ?>
 
 
