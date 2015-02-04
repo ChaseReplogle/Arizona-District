@@ -170,14 +170,14 @@ Support Menu Styles
 /*--------------------------------------------------------------
 Primary Menu Styles
 --------------------------------------------------------------*/
-.header { border-bottom: 1px solid #dfdfdf; padding: 0px 20px; position: relative; background-color: white; }
+.header { border-bottom: 1px solid #7A7A7A; padding: 0px 20px; position: relative; background-color: white; }
 @media screen and (max-width: 768px) { .header { display: none; } }
 
 .header__branding { width: 18%; float: left; display: block; }
 
 .header__branding h1 { padding-bottom: 0px; margin-bottom: 0px; border-bottom: 0px; }
 
-.header__branding__logo img { width: 100%; height: auto; padding: 20px 0px 15px 0px; }
+.header__branding__logo img { width: 100%; height: auto; padding: 20px 0px 0px 0px; }
 
 .header__menu { float: right; width: auto; }
 
