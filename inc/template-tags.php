@@ -457,7 +457,7 @@ function arizona_district_subscribe_link() { ?>
 	<div class="subscribe-bar-box">
 		<div class="subscribe-bar-box-wrapper wrapper">
 			<div class="subscribe-bar-content col-9-12">
-				<p><strong>Join our District Ministries email list.</strong> You will receive newsletters containing important information about events or inspirational words for our District Leadership team.</p>
+				<p><strong>Join our District Ministries email list.</strong> You will receive newsletters containing important information about events or inspirational words from our District Leadership team.</p>
 			</div>
 			<div class="subscribe-bar-link col-3-12">
 				<p><a href="#" targe="_Blank" class="button">Subscribe</a></p>
@@ -496,7 +496,6 @@ function arizona_district_resources_bar() { ?>
 		<div class="resource-bar-text hide-on-mobile">
 			<h3>Resources</h3>
 			<p>Ministries and resources to help support your calling and your church.</p>
-			<a href="#">Discover More</a>
 		</div>
 
 		    <?php foreach( $post_objects as $post):  ?>
