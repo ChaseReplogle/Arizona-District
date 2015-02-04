@@ -191,7 +191,7 @@ $("#searchOptions input[type='radio']").click(function () {
   $reviews.eq(Math.random()*$reviews.length).addClass("show");
   $(".show").find(".timer").addClass("fixed_timer");
 
-  var finishTime = $(".fixed_timer").value();
+  var finishTime = $(".fixed_timer").html();
   jQuery({someValue: 0}).animate({someValue: finishTime}, {
   	duration: 2000,
   	step: function() { // called on every step
