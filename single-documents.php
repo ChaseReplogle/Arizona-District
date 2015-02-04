@@ -34,7 +34,7 @@ get_header(); ?>
 				        </div>
 				      <div class="document_text">
 				          <a href='<?php the_field("document_file"); ?>' class="title" target="_Blank"><?php the_title(); ?> <span>(<?php the_field("document_type"); ?>)</span></a>
-				          <p><?php echo $excerpt; ?>...</p>
+				          <p><?php the_excerpt(); ?>...</p>
 				          <a href="<?php the_field('document_file'); ?>" target="_Blank">Download</a>
 				        </div>
 				     </div>
