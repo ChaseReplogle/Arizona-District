@@ -19,7 +19,6 @@ get_header(); ?>
 
 		<div class="wrapper">
 			<aside class="sidebar col-3-12 hide-on-mobile">
-				<?php arizona_district_sidebar_nav(); ?>
 			</aside>
 
 			<main id="main" class="site-main col-9-12" role="main">

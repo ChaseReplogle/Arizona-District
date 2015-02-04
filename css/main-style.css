@@ -168,6 +168,7 @@ Support Menu Styles
 .header-support__menu .menu-item a:hover { color: white; }
 
 #menu-item-36 { background: #d27026; }
+#menu-item-36 a { color: white; }
 
 /*--------------------------------------------------------------
 Primary Menu Styles
