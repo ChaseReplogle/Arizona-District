@@ -196,7 +196,7 @@ $("#searchOptions input[type='radio']").click(function () {
   	duration: 2000,
   	step: function() { // called on every step
   		// Update the element's text with rounded-up value:
-  		$('.fixed_timer').text(Math.ceil(this.someValue));
+  		$('.fixed_timer').text(Math.round(this.someValue));
   	}
   });
 
