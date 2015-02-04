@@ -41,7 +41,7 @@ get_header(); ?>
 
 			 			<?php $args = array (
 							'post_type'     => 'leadership',
-							'order'			=> 'DESC',
+							'order'			=> 'ASC',
 							'orderby'       => 'Executive Director Staff menu_order',
 							'meta_key' => 'leadership_position',
 							'meta_value' => 'Executive'
@@ -64,7 +64,7 @@ get_header(); ?>
 
 						<?php $args = array (
 							'post_type'     => 'leadership',
-							'order'			=> 'DESC',
+							'order'			=> 'ASC',
 							'orderby'       => 'Executive Director Staff menu_order',
 							'meta_key' => 'leadership_position',
 							'meta_value' => 'Director'
@@ -88,7 +88,7 @@ get_header(); ?>
 
 						<?php $args = array (
 							'post_type'     => 'leadership',
-							'order'			=> 'DESC',
+							'order'			=> 'ASC',
 							'orderby'       => 'Executive Director Staff menu_order',
 							'meta_key' => 'leadership_position',
 							'meta_value' => 'Staff'
