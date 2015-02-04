@@ -198,7 +198,10 @@ $(document).ready(function() {
   	step: function() { // called on every step
   		// Update the element's text with rounded-up value:
   		$('.fixed_timer').text(Math.round(this.someValue));
-  	}
+  	},
+    complete : function(){
+        $('.fixed_timer').text(finishTime);
+    }
   });
 });
 
