@@ -212,7 +212,6 @@ $(document).ready(function() {
  * Tabs - Handles the tab functionality.
  *
  */
-$(document).ready(function() {
     $(".tabs-menu a").click(function(event) {
         event.preventDefault();
         $(this).parent().addClass("current");
@@ -221,7 +220,7 @@ $(document).ready(function() {
         $(".tab-content").css("display", "none");
         $(tab).css("display", "block");
     });
-});
+
 
 
 
