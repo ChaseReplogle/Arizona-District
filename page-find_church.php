@@ -238,6 +238,8 @@ get_header(); ?>
 		</div>
 	</div><!-- #primary -->
 
+<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+
 
 <?php if( get_field('instagram_bar') ) { ?>
 	<?php arizona_district_instagram_bar(); ?>
