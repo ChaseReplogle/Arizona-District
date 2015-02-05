@@ -243,6 +243,10 @@ get_header(); ?>
 	<?php arizona_district_instagram_bar(); ?>
 <?php } ?>
 
+<?php if( get_field('subscribe_bar') ) { ?>
+	<?php arizona_district_instagram_bar(); ?>
+<?php } ?>
+
 
 <?php if( get_field('resources_bar') ) { ?>
 	<?php arizona_district_resources_bar(); ?>
