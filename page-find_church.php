@@ -246,7 +246,7 @@ get_header(); ?>
 <?php } ?>
 
 <?php if( get_field('subscribe_bar') ) { ?>
-	<?php arizona_district_subscribe_bar(); ?>
+	<?php arizona_district_subscribe_link(); ?>
 <?php } ?>
 
 
