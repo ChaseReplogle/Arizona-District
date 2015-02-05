@@ -23,6 +23,7 @@ function render_map( $el ) {
   // vars
   var args = {
     zoom    : 16,
+    scrollwheel: false,
     center    : new google.maps.LatLng(0, 0),
     mapTypeId : google.maps.MapTypeId.ROADMAP
   };
