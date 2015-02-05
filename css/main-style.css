@@ -750,8 +750,12 @@ Find A Church Search
 --------------------------------------------------------------*/
 .church-tab p.support-text { margin-bottom: 10px; text-align: left; }
 
+.letter-wrapper { margin-bottom: 10px; }
+
+.church-tab table { margin-top: 0px; }
+
 .church-search-tabs { margin-bottom: 20px; }
-.church-search-tabs li { width: 33.333%; background: #fafafa; border: 1px solid #ececec; border-right: 0px; float: left; text-align: center; color: #4a4a4a; font-size: 14px; }
+.church-search-tabs li { width: 25%; background: #fafafa; border: 1px solid #ececec; border-right: 0px; float: left; text-align: center; color: #4a4a4a; font-size: 14px; }
 .church-search-tabs li a { text-align: center; text-decoration: none; color: #4a4a4a; font-size: 16px; display: block; width: 100%; padding: 15px 0px; }
 .church-search-tabs li:last-child { border-right: 1px solid #ececec; }
 .church-search-tabs li.current { background: white; }
@@ -779,6 +783,16 @@ Find A Church Search
 .direction_link { display: block; font-size: 14px; color: #b0b0b0; margin-top: 5px; }
 
 .acf-map { width: 100%; left: 0px; height: 400px; border: #ccc solid 1px; position: absolute; bottom: 0px; }
+
+.acf-map.boxed { position: relative; height: 700px; }
+
+.gm-style-iw h4 { margin: 10px 0px 5px 0px; }
+
+.gm-style-iw p.address { margin-bottom: 5px; }
+
+.gm-style-iw a { margin-bottom: 20px; }
+
+#map img { max-width: inherit; }
 
 /*--------------------------------------------------------------
 Search Results Page

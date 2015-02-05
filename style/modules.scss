@@ -1317,11 +1317,19 @@ Find A Church Search
 	text-align: left;
 }
 
+.letter-wrapper {
+	margin-bottom: 10px;
+}
+
+.church-tab table {
+	margin-top: 0px;
+}
+
 .church-search-tabs {
 	margin-bottom: 20px;
 
 	li {
-		width: 33.333%;
+		width: 25%;
 		background: lighten($gray-light, 1%);
 		border: 1px solid lighten($gray, 5%);
 		border-right: 0px;
@@ -1421,7 +1429,27 @@ Find A Church Search
 }
 
 
+.acf-map.boxed {
+	position: relative;
+	height: 700px;
+}
 
+
+.gm-style-iw h4 {
+	margin: 10px 0px 5px 0px;
+}
+
+.gm-style-iw p.address {
+	margin-bottom: 5px;
+}
+
+.gm-style-iw a {
+	margin-bottom: 20px;
+}
+
+#map img {
+	max-width: inherit;
+}
 
 /*--------------------------------------------------------------
 Search Results Page
@@ -1457,3 +1485,4 @@ Search Results Page
 .search-item .post_type {
 	color: darken($gray, 20%);
 }
+
