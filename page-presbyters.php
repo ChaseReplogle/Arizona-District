@@ -43,7 +43,8 @@ get_header(); ?>
 							'post_type'     => 'leadership',
 							'order'			=> 'DESC',
 							'meta_key' => 'leadership_position',
-							'meta_value' => 'presbyter'
+							'meta_value' => 'presbyter',
+							'orderby'       => 'leadership_position',
 						);
 
 						$leadership = new WP_Query( $args );
