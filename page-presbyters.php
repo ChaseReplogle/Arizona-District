@@ -43,7 +43,9 @@ get_header(); ?>
 							'post_type'     => 'leadership',
 							'meta_key' => 'leadership_position',
 							'meta_value' => 'presbyter',
-							'orderby'       => 'leadership_title',
+							'meta_key' => 'leadership_title',
+							'orderby'       => 'meta_value',
+
 							'order'			=> 'ASC',
 						);
 
