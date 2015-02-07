@@ -41,12 +41,20 @@ get_header(); ?>
 
 			 			<?php $args = array (
 							'post_type'     => 'leadership',
-							'meta_key' => 'leadership_position',
-							'meta_value' => 'presbyter',
-							'meta_key' => 'leadership_title',
-							'orderby'       => 'meta_value',
+							 'meta_query'     => array(
+						        array(
+						            'key'       => 'leadership_position',
+						            'value'     => 'presbyter',
+						            'compare'   => '='
+						        )
+						    ),
+						    'orderby'  => 'meta_value',            // this means we will be using a selected
+						                                           // meta field to order
 
-							'order'			=> 'ASC',
+						    'meta_key' => 'leadership_title', // this states which meta field
+						                                           // will be used in the ordering,
+						                                           // regardless of the filters
+						    'order'    => 'ASC',
 						);
 
 						$leadership = new WP_Query( $args );
