@@ -41,7 +41,7 @@ get_header(); ?>
 
 			 			<?php $args = array (
 							'post_type'     => 'leadership',
-							'order'			=> 'DESC',
+							'order'			=> 'ASC',
 							'meta_key' => 'leadership_position',
 							'meta_value' => 'presbyter',
 							'orderby'       => 'leadership_title',
