@@ -41,10 +41,10 @@ get_header(); ?>
 
 			 			<?php $args = array (
 							'post_type'     => 'leadership',
-							'order'			=> 'ASC',
 							'meta_key' => 'leadership_position',
 							'meta_value' => 'presbyter',
 							'orderby'       => 'leadership_title',
+							'order'			=> 'ASC',
 						);
 
 						$leadership = new WP_Query( $args );
