@@ -460,7 +460,7 @@ function arizona_district_subscribe_link() { ?>
 				<p><strong>Join our District Ministries email list.</strong> You will receive newsletters containing important information about events or inspirational words from our District Leadership team.</p>
 			</div>
 			<div class="subscribe-bar-link col-3-12">
-				<p><a href="http://visitor.r20.constantcontact.com/manage/optin?v=001RO3dPrXHwIEcBWK-UbEawgJR16_TgyIZHX3SuTICPx9G5uxOtVGtGO13ZoZu94Uj4EnbqsO5_aC21nQwDzyOkh1yvjCE2AiCRMEN21Ah6Vg%3D" targe="_Blank" class="button">Subscribe</a></p>
+				<p><a href="http://visitor.r20.constantcontact.com/manage/optin?v=001RO3dPrXHwIEcBWK-UbEawgJR16_TgyIZHX3SuTICPx9G5uxOtVGtGO13ZoZu94Uj4EnbqsO5_aC21nQwDzyOkh1yvjCE2AiCRMEN21Ah6Vg%3D" target="_Blank" class="button">Subscribe</a></p>
 			</div>
 		</div>
 	</div><!-- .subscribe-bar-bos -->
