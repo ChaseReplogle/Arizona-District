@@ -35,10 +35,10 @@
 				</div>
 				<div class="site-footer-info-social col-3-12 mobile-col-1-1">
 					<ul class="soc">
-						<?php if( get_field('twitter_url') ): ?><li><a class="soc-twitter" href="<?php the_field('twitter_url', 'option'); ?>"></a></li><?php endif; ?>
-					    <?php if( get_field('facebook_url') ): ?><li><a class="soc-facebook" href="<?php the_field('facebook_url', 'option'); ?>"></a></li><?php endif; ?>
-					    <?php if( get_field('instagram_url') ): ?><li><a class="soc-instagram" href="<?php the_field('instagram_url', 'option'); ?>"></a></li><?php endif; ?>
-					    <?php if( get_field('youtube_url') ): ?><li><a class="soc-youtube soc-icon-last" href="<?php the_field('youtube_url', 'option'); ?>"></a></li><?php endif; ?>
+						<?php if( get_field('twitter_url', 'option') ): ?><li><a class="soc-twitter" href="<?php the_field('twitter_url', 'option'); ?>"></a></li><?php endif; ?>
+					    <?php if( get_field('facebook_url', 'option') ): ?><li><a class="soc-facebook" href="<?php the_field('facebook_url', 'option'); ?>"></a></li><?php endif; ?>
+					    <?php if( get_field('instagram_url', 'option') ): ?><li><a class="soc-instagram" href="<?php the_field('instagram_url', 'option'); ?>"></a></li><?php endif; ?>
+					    <?php if( get_field('youtube_url', 'option') ): ?><li><a class="soc-youtube soc-icon-last" href="<?php the_field('youtube_url', 'option'); ?>"></a></li><?php endif; ?>
 					</ul>
 				</div>
 			</div>
